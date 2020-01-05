@@ -36,7 +36,7 @@ Maalesef Premium Süresi Bitmiştir. Hizmetimizden Memnun Olduysanız Tekrar Ala
     var es = new Discord.RichEmbed()
     .setDescription(`Yazma süre limiti **${limit}** Saniye olarak ayarlanmıştır!`)
     .setColor("RANDOM")
-     .setFooter('SepuLtura',client.user.avatarURL)
+     .setFooter('EFE ',client.user.avatarURL)
 .setTimestamp()
     msg.channel.send({embed: es})
   
