@@ -11,7 +11,7 @@ exports.run = async (client, message,args) => {
   
   const embed = new Discord.RichEmbed()
   .setColor("BLUE")
-  .setAuthor("EŞŞEK-AT", client.user.avatarURL)
+  .setAuthor("SepuLtura", client.user.avatarURL)
   .setTitle(message.guild.name + " GEÇİCİ ODALAR")
   .setDescription(`${aktifkanallar.join('\n')}`)
   .setTimestamp()

@@ -4,7 +4,7 @@ const db = require('quick.db')
 exports.run = async (client, message,args) => {
   
 const embed = new Discord.RichEmbed()
-     .setAuthor("EŞŞEK-AT", client.user.avatarURL)
+     .setAuthor("SepuLtura", client.user.avatarURL)
 .setColor('BLUE')
 .addField("__Geçici Oda ayarlamak__", '__**!geçici-oda-kurulum**__ 》 **Geçici Oda Sistemi Kurar.**\n Örnek: `-geçici-oda-kurulum`')
 .setTimestamp()

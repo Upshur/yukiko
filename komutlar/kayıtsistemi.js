@@ -3,7 +3,7 @@ const db = require('quick.db')
 exports.run = (client, message, args) => { 
   
 const embed = new Discord.RichEmbed()  
-.setAuthor("EŞŞEK-AT", client.user.avatarURL)
+.setAuthor("SepuLtura", client.user.avatarURL)
 .setColor('BLUE')
 .setTitle(`MC-EŞŞEK BOT`)
 .setURL("https://discord.gg/jRzZB7")

@@ -3,7 +3,7 @@ const db = require('quick.db')
 exports.run = (client, message, args) => { 
   
 const embed = new Discord.RichEmbed()  
-.setAuthor("EŞŞEK-AT", client.user.avatarURL)
+.setAuthor("SepuLtura", client.user.avatarURL)
 .setColor('BLUE')
 .addField("__Sayaç Ayarlamak__", '__**-sayaç-ayarla**__ 》 **Sayacı Ayarlar.**\n Örnek: `-sayac-ayarla #logkanalı **Sayı**` \n \n __**-sayac-hg-msg **__》 **Sayaç Hoşgeldin Mesajını Ayarlar. __!Premium İçindir__**\n Örnek: `-sayac-hg-msg -server-, Sunucumuza Hoşgeldin, -uye-! -hedefuye- Kişiye Ulaşabilmek İçin -kalanuye- Kişi Kaldı!, **-uyesayisi-** Kişiyiz.` \n \n __**-sayac-bb-msg**__ 》 **Sayaç Bay Bay Mesajını Ayarlar. __!Premium İçindir__**\nÖrnek: `-sayac-bb-msg -uyetag-, Sunucumuzdan Ayrıldı, -hedefuye- Kişiye Ulaşabilmek İçin -kalanuye- Kişi Kaldı. **-uyesayisi-** Kişiyiz.`')
 

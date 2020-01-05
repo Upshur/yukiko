@@ -4,8 +4,8 @@ const db = require('quick.db')
 exports.run = async (client, message,args) => {
   
 const embed = new Discord.RichEmbed()
-     .setAuthor("MC-EŞEK",client.user.avatarURL)
-     .setTitle('MC-EŞEK BOT')
+     .setAuthor("SepuLtura",client.user.avatarURL)
+     .setTitle('SepuLtura BOT')
      .setURL('https://discord.gg/bWjWHK')
      .setColor('BLUE')
      .setDescription("Sunucu koruma sistemlerinin bulunduğu bölüm;")     //ula enayi stark setDesctipyion varken niye addfield ile ortalığı karıştırdın :D
