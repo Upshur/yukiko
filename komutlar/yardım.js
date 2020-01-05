@@ -11,8 +11,8 @@ exports.run = async(client, message, args) => {
  .setDescription(`
 
 **-yardım**, ile yardım alabilirsiniz.
-Örnek komut kullanımı: \`!küfüraç\`
-Botu davet etmek için: \`!davet\`
+Örnek komut kullanımı: \`-küfüraç\`
+Botu davet etmek için: \`-davet\`
 `)
  .addField("-komutlar (13)", `
 herkesin kullanabileceği standart komutlar;
@@ -20,7 +20,7 @@ herkesin kullanabileceği standart komutlar;
 `)
  .addField("-eğlence (9)", `
 herkesin kullanabileceği eğlence komutları;
-\`kralol\`,\`maymunol\`,\`yılanol\`,\`adamol\`,\`kediol\`,\`aşk\`,\`token\`,\`tokat\`
+\`kralol\`,\`aşk\`,\`token\`,\`tokat\`
 `)
  
  .addField("-moderasyon (13)", `
