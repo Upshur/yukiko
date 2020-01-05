@@ -8,13 +8,12 @@ exports.run = (client, message, args) => {
  var user = message.mentions.users.first() || message.author; 
   const duration = client.uptime
 const embed = new Discord.RichEmbed()
-.setAuthor("MC-EŞŞEK", client.user.avatarURL)
-.setTitle("MC-EŞŞEK BOT")
-.setURL("https://goo.gl/vJvz9g")
-.setDescription("www.Mcadventuretime.com tarafından hazırlanmıştır.")
+.setAuthor("SepuLtura", client.user.avatarURL)
+.setTitle("SepuLtura")
+.setDescription("SepuLtura.")
 .setColor("BLUE")
 .setTimestamp()
-.setFooter("© Mcadventuretime.com", client.user.avatarURL)
+.setFooter("© SepuLtura", client.user.avatarURL)
 .addField("Kullanılan RAM miktarı", `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB`)
 .addField("Toplam RAM miktarı", `${(process.memoryUsage().heapTotal / 1024 / 1024).toFixed(2)} MB`)
 .addField("Toplam sunucu sayısı", `${client.guilds.size.toLocaleString()}`)
@@ -25,7 +24,6 @@ ${duration / 60 / 60} dakika içinde,
 **32,626** kullanılan kelime içerisinden :speech_balloon: 
 **220** küfür engellendi :angry: 
 **6** reklam engellendi :hammer:
-[Bot Durumu](https://goo.gl/vJvz9g)
 `)
 message.channel.send(embed)
 };
