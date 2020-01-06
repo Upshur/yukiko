@@ -7,7 +7,7 @@ exports.run = async (client, message, args, color) => {
     let API = (client.ping).toFixed(2)
         
         let embed = new Discord.RichEmbed()
-        .setTitle(`:bell: Pong!`)
+        .setTitle(`:bell: Ping Menüsü!`)
         .setColor(0xff2f2f)
         .addField("📶 Mesaj Gecikmesi", `${diff}ms`, true)
         .addField("💻 Bot Gecikmesi", `${API}ms`, true)
