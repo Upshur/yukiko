@@ -25,7 +25,7 @@ herkesin kullanabileceği eğlence komutları;
  
  .addField("-moderasyon (13)", `
 yetkililer için moderasyon komutları;
-\`küfüraç,\`reklamaç\`,\`link engelaç\`,\`reklam kickaç\`,\`reklam isim ban\`,\`oto rol\`,\`sayaç\`,\`ban koruma sistemi\`,\`duyuru\`,\`oto cevap\`,\`mute sistemi\`,\`anti raid bot sistemi\`
+\`küfür aç,\`reklam aç\`,\`link engel aç\`,\`reklam kick aç\`,\`reklam isim ban aç\`,\`oto rol\`,\`sayaç\`,\`ban koruma sistemi\`,\`duyuru\`,\`oto cevap\`,\`mute sistemi\`,\`anti raid bot sistemi\`
 `)
  
  .addField("-moderasyon 2 (12)", `
