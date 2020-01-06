@@ -16,16 +16,16 @@ Botu davet etmek için: \`-davet\`
 `)
  .addField("-komutlar (13)", `
 herkesin kullanabileceği standart komutlar;
-\`botbilgi\`,\`davet\`,\`oyver\`,\`gold\`,\`webpanel\`,\`sunucu-pp\`,\`profil\`,\`kredim\`,\`p-market\`,\`p-menü\`,\`puanım\`,\`ayarlar\`
+\`botbilgi\`,\`davet\`,\`oyver\`,\`gold\`,\`sunucu-pp\`,\`profil\`,\`kredim\`,\`p-market\`,\`p-menü\`,\`puanım\`,\`ayarlar\`
 `)
  .addField("-eğlence (9)", `
 herkesin kullanabileceği eğlence komutları;
-\`kralol\`,\`aşk\`,\`token\`,\`tokat\`
+\`aşk\`,\`token\`,\`tokat\`
 `)
  
  .addField("-moderasyon (13)", `
 yetkililer için moderasyon komutları;
-\`küfür\`,\`reklam\`,\`link engel\`,\`reklam kick\`,\`reklam isim ban\`,\`oto rol\`,\`sayaç\`,\`ban koruma sistemi\`,\`duyuru\`,\`oto cevap\`,\`mute sistemi\`,\`anti raid bot sistemi\`
+\`küfüraç,\`reklamaç\`,\`link engelaç\`,\`reklam kickaç\`,\`reklam isim ban\`,\`oto rol\`,\`sayaç\`,\`ban koruma sistemi\`,\`duyuru\`,\`oto cevap\`,\`mute sistemi\`,\`anti raid bot sistemi\`
 `)
  
  .addField("-moderasyon 2 (12)", `
