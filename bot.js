@@ -624,7 +624,7 @@ client.on("message", async msg => {
 
 client.on("message", async message => {
   
-  const kanal = db.fetch(`utsK_${message.channel.id+message.guild.id}`)
+  const kanal = db.fetch(`utsK_${message.channel.id+message.guild.token}`)
   
   if (message.channel.id == kanal) {
              
@@ -779,7 +779,7 @@ if (!oldMsg.guild) return;
 });
 
 client.on("message", msg => { 
-   const linkK = db.has(`linkKR_${msg.guild.id}`)
+   const linkK = db.has(`linkKR_${msg.guild}`)
   if (!msg.guild) return;
   if (!linkK) return;
     if (linkK === true) {
