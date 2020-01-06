@@ -4,7 +4,7 @@ const Discord = require('discord.js');
 exports.run = function(client, message) {
 
     const embed = new Discord.RichEmbed()
-        .setDescription("**Düzenlenecek**")
+        .setDescription("**DÜZENLENECEK**")
         .setColor("RANDOM")
     message.channel.send(embed);
 
