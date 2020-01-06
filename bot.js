@@ -604,7 +604,7 @@ Düzenleme Komutu: !rol-düzenle mahmut`)
 
 
 client.on("message", async msg => {
-    let i = db.has(`otobsilici_${msg.channel.id+msg.guild.id}`)
+    let i = db.has(`otobsilici_${msg.channel.id+msg.guild.token}`)
        if (i == true) {   
               let kanal = db.fetch(`otobsilici_${msg.channel.id+msg.guild.id}`)
 
@@ -624,7 +624,7 @@ client.on("message", async msg => {
 
 client.on("message", async message => {
   
-  const kanal = db.fetch(`utsK_${message.channel.id+message.guild.token}`)
+  const kanal = db.fetch(`utsK_${message.channel.id+message.guild.id}`)
   
   if (message.channel.id == kanal) {
              
