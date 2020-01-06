@@ -1,8 +1,7 @@
 const Discord = require('discord.js');
 
 exports.run = (client, message, args) => {
-  if (message.author.id) if (ayarlar.sahip.includes(message.author.id)) permlvl = 4;
-return message.channel.send("**Bunun için iznin yok**");
+  if (message.author.id != "411411280084074507") return message.channel.send("**`Bunun için iznin yok`**");
 
   let mesaj = args.slice(0).join(' ');
 if (mesaj.length < 1) return message.channel.send('Birşey Yazmalısınız');
