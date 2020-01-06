@@ -1,42 +1,31 @@
-const Discord = require('discord.js');
-const loglar = require('../ayarlar.json');
+const Discord = require('discord.js')
 
-var prefix = loglar.prefix;
+exports.run = async (client, message, args, color) => {
 
-exports.run = (client, message, params) => {
-  if (!params[0]) {
-    const commandNames = Array.from(client.commands.keys());
-    message.channel.send({embed: {
-            color: 0xD97634,
-            author: {
-              name: "Ping Menüsü",
-              icon_url: ""
-            },
-                "thumbnail": {
-                 "url": ""
-            },
-            title: "",
-            description: `🏓 [Pong](https://www.discordapp.com) : **${Math.round(client.ping)}** ms \nÇok Hızlıyım Dimi 😂`,
-            fields: [
-            ],
-            timestamp: new Date(),
-            footer: {
-              icon_url: "",
-              text: "© Tüm Hakları Saklıdır. "
-            }
-          }
-        });  
-        message.react("📝")
-}};
+    let start = Date.now(); message.channel.send( 'Ping Menüsü! ').then(message => { 
+    let diff = (Date.now() - start); 
+    let API = (client.ping).toFixed(2)
+        
+        let embed = new Discord.RichEmbed()
+        .setTitle(`:bell: Pong!`)
+        .setColor(0xff2f2f)
+        .addField("📶 Mesaj Gecikmesi", `${diff}ms`, true)
+        .addField("💻 Bot Gecikmesi", `${API}ms`, true)
+        message.edit(embed);
+      
+    });
+
+}
+
 exports.conf = {
-  enabled: true,
-  guildOnly: false,
-  aliases: ['p', 'pong', 'uptime',],
-  permLevel: 0
-};
+    enabled: true,
+    guildOnly: false,
+    aliases: [],
+    permLevel: 0
+  };
 
 exports.help = {
-  name: 'ping',
-  description: 'Botun Pingini Gösterir !',
-  usage: 'ping'
-};
+    name: 'ping',
+    category: 'INFO'
+}
+ 
