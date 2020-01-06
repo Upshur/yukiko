@@ -188,10 +188,43 @@ client.on("guildMemberAdd", async member => {
 
 
 
+client.on('guildBanAdd' , (guild, user) => {
+  let bankişi = guild.channels.find('name', '🔨ban-kişi🔨');
+  if (!bankişi) return;
+  bankişi.send('https://media.giphy.com/media/fe4dDMD2cAU5RfEaCU/giphy.gif **Adalet dağıtma zamanı gelmiş!** '+ user.username +'**Bakıyorum da suç işlemiş,Yargı dağıtmaya devam** :fist: :writing_hand:  :spy:' );
+});
 
 
 
 
+client.on('guildMemberAdd', member => {
+  let guild = member.guild;
+  let joinRole = guild.roles.find('name', 'Yeni Üye');// 'Üye' yazılan yeri otomatik rol vereceği rolü yapabilirsiniz.//Otorol Komudu :)
+  member.sendMessage("Sunucuya Hoşgeldin Kardeşim **UMARIM İYİ VAKİT GEÇİRİRİSİN.**")//Sunucuya Yeni Biri Geldiğinde Mesaj Atar istediğini yaz.
+  member.addRole(joinRole);
+
+  const channel = member.guild.channels.find('name', '🎫-mod-log-🎫');// 'gelen-giden' log ismidir. değiştirebilirsiniz. belirttiğiniz isme giriş çıkış gösterecektir.
+  if (!channel) return;
+  const embed = new Discord.RichEmbed()
+  .setColor('0x00cc44')
+  .setAuthor(client.user.username, client.user.avatarURL)
+  .setThumbnail(member.user.avatarURL)
+  .setTitle(`:inbox_tray: ${member.user.username} Sunucuya katıldı.`)
+  .setTimestamp()
+  channel.sendEmbed(embed);
+});
+
+client.on('guildMemberRemove', member => {
+  const channel = member.guild.channels.find('name', '🎫-mod-log-🎫');// 'gelen-giden' log ismidir. değiştirebilirsiniz. belirttiğiniz isme giriş çıkış gösterecektir.
+  if (!channel) return;
+  const embed = new Discord.RichEmbed()
+  .setColor('0xff1a1a')
+  .setAuthor(client.user.username, client.user.avatarURL)
+  .setThumbnail(member.user.avatarURL)
+  .setTitle(`:outbox_tray: ${member.user.username} Sunucudan ayrıldı.`)
+  .setTimestamp()
+  channel.sendEmbed(embed);
+});
 
 
 
