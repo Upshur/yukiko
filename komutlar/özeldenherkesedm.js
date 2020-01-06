@@ -1,7 +1,14 @@
 const Discord = require('discord.js');
 
 exports.run = (client, message, args) => {
-  if (message.author.id != "411411280084074507") return message.channel.send("Bunun için iznin yok");
+
+    if (!message.guild) {
+    const ozelmesajuyari = new Discord.RichEmbed()
+    .setColor(0x2488E7)
+    .setTimestamp()
+    .setAuthor(message.author.username, message.author.avatarURL)
+    .addField('Sen Napıyorsun', 'Bu komutu yetkin olmadan kullanamazsın.')
+    return message.author.sendEmbed(ozelmesajuyari); }
 
   let mesaj = args.slice(0).join(' ');
 if (mesaj.length < 1) return message.channel.send('Birşey Yazmalısınız');
@@ -18,19 +25,19 @@ if (mesaj.length < 1) return message.channel.send('Birşey Yazmalısınız');
 u.sendEmbed(mesajat)
 })
 
-message.channel.send(`:white_check_mark: Mesaj basariyla **` + client.guilds.reduce((a, b) => a + b.memberCount, 0).toLocaleString() + `** kullanıcıya gonderildi.`);
+message.channel.send(`:white_check_mark: Mesaj basariyla **` + client.guilds.reduce((a, b) => a + b.memberCount, 0).toLocaleString() + `** kullanıcıya gönderildi.`);
 
 };
 
 exports.conf = {
   enabled: true,
   guildOnly: true,
-  aliases: ['duyur'],
-  permLevel: 3
+  aliases: ['duyurla'],
+  permLevel: 4
 };
 
 exports.help = {
-  name: 'duyuru',
+  name: 'duyur',
   description: 'İstediğiniz şeyi bota duyurtur.',
-  usage: 'duyuru'
+  usage: 'duyuru [duyurmak istediğiniz şey]'
 };
