@@ -355,6 +355,29 @@ client.on("channelDelete", async(channel) => {
   
 })
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //Rol Limit
 client.on("roleDelete", async(role) => {
   const guild = role.guild;
