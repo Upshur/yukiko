@@ -116,7 +116,7 @@ client.unload = command => {
 
 client.on("message", async (message) => {
 if(message.author.bot || message.channel.type === "dm") return;
-  let sChannelanan = message.guild.channels.find(c => c.name === "KANAL İSMİ")
+  let sChannelanan = message.guild.channels.find(c => c.name === "🎫-mod-log-🎫")
   let embed = new Discord.RichEmbed()
   .setColor("GREEN")
   .setAuthor(`Mesaj Gönderildi`, message.author.avatarURL)
@@ -132,7 +132,7 @@ if(message.author.bot || message.channel.type === "dm") return;
 
 client.on("messageUpdate", async (oldMessage, newMessage) => {
 if(newMessage.author.bot || newMessage.channel.type === "dm") return;
-  let sChannelanan = newMessage.guild.channels.find(c => c.name === "KANAL İSMİ")
+  let sChannelanan = newMessage.guild.channels.find(c => c.name === "🎫-mod-log-🎫")
   if (oldMessage.content == newMessage.content) return;
   let embed = new Discord.RichEmbed()
   .setColor("GREEN")
