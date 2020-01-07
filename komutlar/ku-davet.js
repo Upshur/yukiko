@@ -14,7 +14,7 @@ const embed = new Discord.RichEmbed()
 .setColor("BLUE")
 .setTimestamp()
 .setFooter("© SepuLtura", client.user.avatarURL)
-.addField("Davet Linki", "YOK NAH ")
+.addField("Davet Linki", " ")
 message.channel.send(embed)
 };
 exports.conf = {
