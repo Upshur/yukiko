@@ -25,7 +25,7 @@ herkesin kullanabileceği eğlence komutları;
  
  .addField("-moderasyon (13)", `
 yetkililer için moderasyon komutları;
-\`Küfür Aç\`,\`reklam taraması\`,\`resimli hg bb\`,\`sunucu tanıt\`,\`oto bot silici\`,\`ultra sohbet temizleyici\`,\`yavaş mod\`,\`duyuru\`,\`tag sistemi\`,\`rol sistemi\`,\`geçici oda sistemi\`,\`kayıt sistemi\`
+\`Küfür Aç\`,\`Reklam Aç\`,\`Link Engel Aç\`,\`Reklam Kick Aç\`,\`Reklam İsim Ban Aç\`,\`Otorol\`,\`Sayaç\`,\`Ban Koruma Sistemi\`,\`Duyuru\`,\`Oto Cevap\`,\`Mute Sistemi\`,\`Anti Raid Bot Sistemi\`
 `)
  
  .addField("-moderasyon 2 (12)", `
