@@ -235,7 +235,7 @@ client.on('guildMemberAdd', member => {
   member.sendMessage("Sunucuya Hoşgeldin Kardeşim **UMARIM İYİ VAKİT GEÇİRİRİSİN.**")//Sunucuya Yeni Biri Geldiğinde Mesaj Atar istediğini yaz.
   member.addRole(joinRole);
 
-  const channel = member.guild.channels.find('name', '🎫-mod-log-🎫');// 'gelen-giden' log ismidir. değiştirebilirsiniz. belirttiğiniz isme giriş çıkış gösterecektir.
+  const channel = member.guild.channels.find('name', '🎄-giren-çıkan-🎄');// 'gelen-giden' log ismidir. değiştirebilirsiniz. belirttiğiniz isme giriş çıkış gösterecektir.
   if (!channel) return;
   const embed = new Discord.RichEmbed()
   .setColor('0x00cc44')
@@ -247,7 +247,7 @@ client.on('guildMemberAdd', member => {
 });
 
 client.on('guildMemberRemove', member => {
-  const channel = member.guild.channels.find('name', '🎫-mod-log-🎫');// 'gelen-giden' log ismidir. değiştirebilirsiniz. belirttiğiniz isme giriş çıkış gösterecektir.
+  const channel = member.guild.channels.find('name', '🎄-giren-çıkan-🎄');// 'gelen-giden' log ismidir. değiştirebilirsiniz. belirttiğiniz isme giriş çıkış gösterecektir.
   if (!channel) return;
   const embed = new Discord.RichEmbed()
   .setColor('0xff1a1a')
