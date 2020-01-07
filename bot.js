@@ -114,7 +114,39 @@ client.unload = command => {
 
 
 
+client.on("message", async (message) => {
+if(message.author.bot || message.channel.type === "dm") return;
+  let sChannelanan = message.guild.channels.find(c => c.name === "KANAL İSMİ")
+  let embed = new Discord.RichEmbed()
+  .setColor("GREEN")
+  .setAuthor(`Mesaj Gönderildi`, message.author.avatarURL)
+  .addField("Kullanıcı", message.author)
+  .addField("Mesaj", message.content, true)
+  .addField("Kanal Adı", message.channel.name, true)
+  .addField("Mesaj ID", message.id, true)
+  .addField("Kullanıcı ID", message.author.id, true)
+  .setThumbnail(message.author.avatarURL)
+  .setFooter(`Bilgilendirme  • bügün saat ${message.createdAt.getHours()+3}:${message.createdAt.getMinutes()}`, `${client.user.displayAvatarURL}`)
+  sChannelanan.send(embed)
+});
 
+client.on("messageUpdate", async (oldMessage, newMessage) => {
+if(newMessage.author.bot || newMessage.channel.type === "dm") return;
+  let sChannelanan = newMessage.guild.channels.find(c => c.name === "KANAL İSMİ")
+  if (oldMessage.content == newMessage.content) return;
+  let embed = new Discord.RichEmbed()
+  .setColor("GREEN")
+  .setAuthor(`Mesaj Düzenlendi`, newMessage.author.avatarURL)
+  .addField("Kullanıcı", newMessage.author)
+  .addField("Eski Mesaj", oldMessage.content, true)
+  .addField("Yeni Mesaj", newMessage.content, true)
+  .addField("Kanal Adı", newMessage.channel.name, true)
+  .addField("Mesaj ID", newMessage.id, true)
+  .addField("Kullanıcı ID", newMessage.author.id, true)
+  .setThumbnail(newMessage.author.avatarURL)
+  .setFooter(`Bilgilendirme  • bügün saat ${newMessage.createdAt.getHours()+3}:${newMessage.createdAt.getMinutes()}`, `${client.user.displayAvatarURL}`)
+  sChannelanan.send(embed)
+});
 
 
 
