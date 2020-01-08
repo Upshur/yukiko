@@ -96,6 +96,86 @@ client.load = command => {
 
 
 
+
+
+client.on("guildCreate", guild => {
+let hob = client.channels.get("664379214157316096")
+const bumm = new Discord.RichEmbed()
+
+.setTitle(`Sunucuya Eklendim`)
+.setTimestamp()
+.setColor("GREEN")
+.setImage(guild.iconURL)
+.addField(`Sunucu İsmi`,guild.name)
+.addField(`Sunucu ID`, guild.id)
+.addField(`Kurucu`,guild.owner.user.tag)
+.addField(`Kurucu ID`,guild.owner.user.id)
+.addField(`Üye Sayısı`,guild.memberCount)
+
+hob.send(bumm)
+});
+
+
+
+
+
+client.on("guildDelete", guild => {
+let hbb = client.channels.get("664379214157316096")
+const bb = new Discord.RichEmbed()
+
+.setTitle(`Sunucudan Atıldım`)
+.setTimestamp()
+.setColor("RED")
+.setImage(guild.iconURL)
+.addField(`Sunucu İsmi`,guild.name)
+.addField(`Sunucu ID`, guild.id)
+.addField(`Kurucu`,guild.owner.user.tag)
+.addField(`Kurucu ID`,guild.owner.user.id)
+.addField(`Üye Sayısı`,guild.memberCount)
+
+hbb.send(bb)
+
+});
+
+
+
+client.on("message", async message => {
+  let prefix = (await db.fetch(`prefix_${message.guild.id}`)) || ayarlar.prefix;
+
+  let kullanıcı = message.mentions.users.first() || message.author;
+  let afkdkullanıcı = await db.fetch(`afk_${message.author.id}`);
+  let afkkullanıcı = await db.fetch(`afk_${kullanıcı.id}`);
+  let sebep = afkkullanıcı;
+
+  if (message.author.bot) return;
+  if (message.content.includes(`${prefix}afk`)) return;
+
+  if (message.content.includes(`<@${kullanıcı.id}>`)) {
+    if (afkdkullanıcı) {
+      message.channel.send(
+        `🔹 \`${message.author.tag}\` Adlı Kullanıcı Artık AFK Değil!`
+      );
+      db.delete(`afk_${message.author.id}`);
+    }
+    if (afkkullanıcı)
+      return message.channel.send(`
+${kullanıcı.tag}\`⏰ Şu Anda AFK\n \nSebep : \`${sebep}\``);
+  }
+
+  if (!message.content.includes(`<@${kullanıcı.id}>`)) {
+    if (afkdkullanıcı) {
+      message.channel.send(
+        `🔹 \`${message.author.tag}\` Adlı Kullanıcı Artık AFK Değil!`
+      );
+      db.delete(`afk_${message.author.id}`);
+    }
+  }
+});
+
+
+
+
+
 client.unload = command => {
     return new Promise((resolve, reject) => {
         try {
