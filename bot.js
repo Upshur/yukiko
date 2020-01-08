@@ -342,7 +342,32 @@ client.on('guildMemberRemove', member => {
 
 
 
-
+client.on("message", async msg => {
+const request = require('node-superfetch');
+const db = require('quick.db');
+const ms = require('parse-ms')
+let timeout = 1200000//süresini dilediğiniz gibi kısaltabilirsiniz.
+let dakdest = await db.fetch(`goldzzz_${msg.author.id}`);
+let i = ayarlar.sahip
+          if (msg.author.id == i) {
+    if (dakdest !== null && timeout - (Date.now() - dakdest) > 0) {
+        let time = ms(timeout - (Date.now() - dakdest));
+    } else {
+  if(msg.author.bot) return;   
+  if (msg.content.length > 1) {
+db.set(`goldzzz_${msg.author.id}`, Date.now());
+  var embed = new Discord.RichEmbed()
+  .setDescription(`:ready: İşte benim **sahibim**! <@${msg.author.id}>`)
+  .setColor("BLUE")
+   msg.channel.send(embed)
+  }
+};
+          }
+   else if (i == undefined) {           
+          }
+          if (!i) return;
+        
+});
 
 
 
