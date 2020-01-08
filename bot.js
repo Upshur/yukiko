@@ -342,6 +342,13 @@ client.on('guildMemberRemove', member => {
 
 
 
+
+
+
+
+
+
+
 client.on("message", async msg => {
 const request = require('node-superfetch');
 const db = require('quick.db');
