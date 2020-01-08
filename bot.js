@@ -793,7 +793,7 @@ client.on("message", msg => {
    msg.delete()
     const Embed = new Discord.RichEmbed()
     .setColor("BLUE")
-    .setAuthor("", client.user.avatarURL)
+    .setAuthor("SepuLtura", client.user.avatarURL)
     .setDescription(`${msg.author} Reklam Yasak Bunu Bilmiyormusun! ${client.emojis.get("649299260906405919")}`)
     msg.channel.send(Embed).then(sil => sil.delete(3000))
   }
