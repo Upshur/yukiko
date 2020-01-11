@@ -37,7 +37,7 @@ errors: ['time'],
       }])
 .then(channel =>
              channel.setParent(message.guild.channels.find(channel => channel.name === "📜 | Önemli")));
-             message.guild.createChannel('mod-log', 'text', [{
+             message.guild.createChannel('🎫-mod-log-🎫', 'text', [{
               id: message.guild.id,
               deny: ['SEND_MESSAGES']
             }])
