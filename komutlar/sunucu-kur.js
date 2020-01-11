@@ -13,7 +13,7 @@ errors: ['time'],
 .then((collected) => {
 })
       .then((collected) => {
-   message.guild.createChannel('📜 | Önemli|', 'category', [{
+   message.guild.createChannel('📜 | SUNUCU|', 'category', [{
   id: message.guild.id,
   deny: ['SEND_MESSAGES']
 }])
@@ -24,30 +24,30 @@ errors: ['time'],
   deny: ['SEND_MESSAGES']
 }])
 .then(channel =>
- channel.setParent(message.guild.channels.find(channel => channel.name === "📜 | Önemli")));
+ channel.setParent(message.guild.channels.find(channel => channel.name === "📜 | SUNUCU")));
  message.guild.createChannel('🧪-duyurluar-🧪', 'text', [{
   id: message.guild.id,
   deny: ['SEND_MESSAGES']
 }])
 .then(channel =>
-       channel.setParent(message.guild.channels.find(channel => channel.name === "📜 | Önemli")));
+       channel.setParent(message.guild.channels.find(channel => channel.name === "📜 | SUNUCU")));
        message.guild.createChannel('🎄-giren-çıkan-🎄', 'text', [{
         id: message.guild.id,
         deny: ['SEND_MESSAGES']
       }])
 .then(channel =>
-             channel.setParent(message.guild.channels.find(channel => channel.name === "📜 | Önemli")));
+             channel.setParent(message.guild.channels.find(channel => channel.name === "📜 | SUNUCU")));
              message.guild.createChannel('🎫-mod-log-🎫', 'text', [{
               id: message.guild.id,
               deny: ['SEND_MESSAGES']
             }])
-            .then(channel => channel.setParent(message.guild.channels.find(channel => channel.name === "📜 | Önemli")));
-            message.guild.createChannel('📦-oylama-📦', 'text', [{
+            .then(channel => channel.setParent(message.guild.channels.find(channel => channel.name === "📜 | SUNUCU")));
+            message.guild.createChannel('🎭-oylama-🎭', 'text', [{
               id: message.guild.id,
               deny: ['SEND_MESSAGES']
             }])
 .then(channel =>
- channel.setParent(message.guild.channels.find(channel => channel.name === "📜 | Önemli")));
+ channel.setParent(message.guild.channels.find(channel => channel.name === "📜 | SUNUCU")));
 
        }) 
        .then((collected) => {
@@ -55,32 +55,32 @@ errors: ['time'],
        id: message.guild.id,
      }]);
              
-      message.guild.createChannel(`💬•genel-sohbet`, 'text')
+      message.guild.createChannel(`💬-genel-sohbet-💬`, 'text')
      .then(channel =>
       channel.setParent(message.guild.channels.find(channel => channel.name === "💬 | SOHBET KANALLARI")));
-     message.guild.createChannel(`🤖•bot-komut`, 'text')
+     message.guild.createChannel(`🤖-bot-komut-🤖`, 'text')
      .then(channel =>
             channel.setParent(message.guild.channels.find(channel => channel.name === "💬 | SOHBET KANALLARI")));
-     message.guild.createChannel(`📷•foto-sohbet`, 'text')
+     message.guild.createChannel(`📷-foto-sohbet-📷`, 'text')
      .then(channel =>
                   channel.setParent(message.guild.channels.find(channel => channel.name === "💬 | SOHBET KANALLARI")));
-     message.guild.createChannel(`🎨tasarım-sohbet`, 'text')
+     message.guild.createChannel(`🎨-tasarım-🎨`, 'text')
 
     message.guild.createChannel('🚀|  SESLİ SOHBET', 'category', [{
       id: message.guild.id,
     }]);
 
-    message.guild.createChannel(`💼yetkili-sohbet`, "voice")
+    message.guild.createChannel(`💼-yetkili-sohbet-💼`, "voice")
     .then(channel =>
       channel.setParent(message.guild.channels.find(channel => channel.name === "🚀|  SESLİ SOHBET")))
     .then(c => {
       });
-  message.guild.createChannel(`💬》Sohbet Odası`, "voice")
+  message.guild.createChannel(`💬-Sohbet Odası-💬`, "voice")
   .then(channel =>
     channel.setParent(message.guild.channels.find(channel => channel.name === "🚀|  SESLİ SOHBET|")))
   .then(c => {
     });
-  message.guild.createChannel(`🎶°Müzik Sohbet`, "voice")
+  message.guild.createChannel(`🎶-Müzik Sohbet-🎶`, "voice")
   .then(channel =>
     channel.setParent(message.guild.channels.find(channel => channel.name === "🚀|  SESLİ SOHBET|")))
   .then(c => {
