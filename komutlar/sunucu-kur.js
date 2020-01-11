@@ -19,19 +19,19 @@ errors: ['time'],
 }])
 
         
- message.guild.createChannel('「📕•kurallar', 'text', [{
+ message.guild.createChannel('🌋-kurallar-🌋', 'text', [{
   id: message.guild.id,
   deny: ['SEND_MESSAGES']
 }])
 .then(channel =>
  channel.setParent(message.guild.channels.find(channel => channel.name === "📜 | Önemli")));
- message.guild.createChannel('「📢•duyurular', 'text', [{
+ message.guild.createChannel('🧪-duyurluar-🧪', 'text', [{
   id: message.guild.id,
   deny: ['SEND_MESSAGES']
 }])
 .then(channel =>
        channel.setParent(message.guild.channels.find(channel => channel.name === "📜 | Önemli")));
-       message.guild.createChannel('「🤗gelen-giden', 'text', [{
+       message.guild.createChannel('🎄-giren-çıkan-🎄', 'text', [{
         id: message.guild.id,
         deny: ['SEND_MESSAGES']
       }])
@@ -42,7 +42,7 @@ errors: ['time'],
               deny: ['SEND_MESSAGES']
             }])
             .then(channel => channel.setParent(message.guild.channels.find(channel => channel.name === "📜 | Önemli")));
-            message.guild.createChannel('📦•oylama', 'text', [{
+            message.guild.createChannel('📦-oylama-📦', 'text', [{
               id: message.guild.id,
               deny: ['SEND_MESSAGES']
             }])
@@ -85,7 +85,7 @@ errors: ['time'],
     channel.setParent(message.guild.channels.find(channel => channel.name === "🚀|  SESLİ SOHBET|")))
   .then(c => {
     });
-  message.guild.createChannel(`⚙°afk`, "voice")
+  message.guild.createChannel(`🍔AFK🍔`, "voice")
   .then(channel =>
     channel.setParent(message.guild.channels.find(channel => channel.name === "🚀|  SESLİ SOHBET|")))
   .then(c => {
