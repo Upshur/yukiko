@@ -230,7 +230,31 @@ if(newMessage.author.bot || newMessage.channel.type === "dm") return;
 
 
 
+var prefix = "-";
+   client.on("message", message => {
+     if(message.content.toLowerCase() === prefix + "youtube") {
 
+
+       message.channel.send("https://www.youtube.com/channel/UCXhYOdHF1-la_55qFgbr2IA?view_as=subscriber").then(message => {
+        message.react("🎬")
+          message.react("🎮")
+          message.react("🎥")
+       })
+     } 
+     
+     
+     if(message.content.toLowerCase() === prefix + "sitem") {
+      message.channel.send("http://ardagbot.glitch.me")
+     }
+   
+     if(message.content.toLowerCase() === prefix + "steam") {
+       message.channel.send("https://steamcommunity.com/profiles/76561199011787519/").then(message => {
+        message.react("✔️")
+          message.react("💲")
+          message.react("💻")
+       })
+     }
+   });
 
 
 
