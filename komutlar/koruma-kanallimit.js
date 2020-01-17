@@ -12,7 +12,7 @@ exports.run = async(client, message, args) => {
   await db.set(`klimit31_${message.guild.id}`, args[0])
   message.reply(`Kanal Hassasiyeti **${args[0]}** Rakamına Ayarlanmıştır. Bu Rakamı Kimseyle Paylaşmayın
 **ÖNEMLİ LÜTFEN OKUYUN**
-!koruma Yazıp Kullanımını Detaylıca Öğreniniz Yoksa bir İşe Yaramaz!
+-koruma Yazıp Kullanımını Detaylıca Öğreniniz Yoksa bir İşe Yaramaz!
 `);
   }
 };

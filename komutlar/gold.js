@@ -5,13 +5,13 @@ exports.run = async(client, message, args) => {
  
     const Embed = new Discord.RichEmbed()
  .setTimestamp()
- .setAuthor("SepuLtura", client.user.avatarURL)
+ .setAuthor("𝐑𝐚𝐧𝐠𝐞𝐫 𝐆", client.user.avatarURL)
 .setColor("BLUE")
-.setTitle("SepuLtura BOT")
+.setTitle("𝐑𝐚𝐧𝐠𝐞𝐫 𝐆 𝐁𝐎𝐓")
  .setURL("https://discordapp.com/oauth2/authorize?client_id=647386467844227074&scope=bot&permissions=8")
 .setDescription("Hep bizimle daha ileriye!")
  .addField("Görünümüne düşkün müsün? O zaman bu tam sana göre!", "Bizlere destek olmak ve harika özellikler kazanmak için \`!p-menü\` yaz")
- .setFooter("© Mcadventuretime.com", client.user.avatarURL)
+ .setFooter("© 𝐑𝐚𝐧𝐠𝐞𝐫 𝐆 𝐁𝐎𝐓", client.user.avatarURL)
  
  return message.channel.send(Embed)
 }

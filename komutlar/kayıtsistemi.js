@@ -3,9 +3,9 @@ const db = require('quick.db')
 exports.run = (client, message, args) => { 
   
 const embed = new Discord.RichEmbed()  
-.setAuthor("SepuLtura", client.user.avatarURL)
+.setAuthor("𝐑𝐚𝐧𝐠𝐞𝐫 𝐆", client.user.avatarURL)
 .setColor('BLUE')
-.setTitle(`MC-EŞŞEK BOT`)
+.setTitle(`𝐑𝐚𝐧𝐠𝐞𝐫 𝐆 𝐁𝐨𝐭`)
 .setURL("https://discord.gg/jRzZB7")
 .addField(`• \`!kayit-kanal-ayarla #kanal\`》`, "Üyelerin Kayıt Olacağı Kanal")
 .addField(`• \`!kanal-ayarla #kanal\`》`, "Üyeler Kayıt Olunca Bildirim Yollanan Kanal")
@@ -13,12 +13,12 @@ const embed = new Discord.RichEmbed()
 Üye İsim Sistemi Özgürce Yerleştirin Değişkenler -uye- -yas-
 Sadece Yaş Seçeneği Eklemezseniz Yaşı Sormayacaktır.
 `)
-.addField(`• \`!kayit-verilecek-rol-ayarla @rol\`》`, "Kayıt Olan Kullanıcıya Otomatik Verilecek Rol")
-.addField(`• \`!kayıt-alınacak-rol-ayarla @rol\`》`, "Kayıt Olan Kullanıcıdan Otomatik Alınacak (Silinecek) Rol")
-.addField(`• \`!kayit-sistemi-kapat\`》`, "Kayıt Sistemini Kapatır Ve Tüm Ayarları Sıfırlar.")
-.addField(`• \`!giriş-sistemi Hoşgeldin -uye- Kayıt Olmak İçin !kayıt mahmut 18\`》`, "Giriş Mesajını Özgürce Editleyebilirsiniz Değişkenler -uye- -uyetag-")
-.addField(`• \`!isim-temizleyici-ac\`》 **PREMIUM SUNUCULAR İÇİN**`, "Üyeler İsimlerinde A-Z Harici Kelime Kullanamazlar")
-.addField(`• \`!isim-temizleyici-kapat\`》 **PREMIUM SUNUCULAR İÇİN**`, "Üyeler İsimlerinde A-Z Harici Kelime Kullanabilirler")
+.addField(`• \`-kayit-verilecek-rol-ayarla @rol\`》`, "Kayıt Olan Kullanıcıya Otomatik Verilecek Rol")
+.addField(`• \`-kayıt-alınacak-rol-ayarla @rol\`》`, "Kayıt Olan Kullanıcıdan Otomatik Alınacak (Silinecek) Rol")
+.addField(`• \`-kayit-sistemi-kapat\`》`, "Kayıt Sistemini Kapatır Ve Tüm Ayarları Sıfırlar.")
+.addField(`• \`-giriş-sistemi Hoşgeldin -uye- Kayıt Olmak İçin !kayıt mahmut 18\`》`, "Giriş Mesajını Özgürce Editleyebilirsiniz Değişkenler -uye- -uyetag-")
+.addField(`• \`-isim-temizleyici-ac\`》 **PREMIUM SUNUCULAR İÇİN**`, "Üyeler İsimlerinde A-Z Harici Kelime Kullanamazlar")
+.addField(`• \`-isim-temizleyici-kapat\`》 **PREMIUM SUNUCULAR İÇİN**`, "Üyeler İsimlerinde A-Z Harici Kelime Kullanabilirler")
 .setDescription(`
 KAYIT Sistemi Kullanımı
 `)

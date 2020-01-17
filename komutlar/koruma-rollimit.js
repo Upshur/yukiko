@@ -12,7 +12,7 @@ exports.run = async(client, message, args) => {
   await db.set(`rlimit31_${message.guild.id}`, args[0])
   message.reply(`Rol Hassasiyeti **${args[0]}** Rakamına Ayarlanmıştır. Bu Rakamı Kimseyle Paylaşmayın
 **ÖNEMLİ LÜTFEN OKUYUN**
-!koruma Yazıp Kullanımını Detaylıca Öğreniniz Yoksa bir İşe Yaramaz!
+-koruma Yazıp Kullanımını Detaylıca Öğreniniz Yoksa bir İşe Yaramaz!
 `);
   }
 };

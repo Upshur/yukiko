@@ -8,12 +8,12 @@ exports.run = (client, message, args) => {
  var user = message.mentions.users.first() || message.author; 
   const duration = client.uptime
 const embed = new Discord.RichEmbed()
-.setAuthor("SepuLtura", client.user.avatarURL)
-.setTitle("SepuLtura")
-.setDescription("SepuLtura.")
+.setAuthor("𝐑𝐚𝐧𝐠𝐞𝐫 𝐆", client.user.avatarURL)
+.setTitle("𝐑𝐚𝐧𝐠𝐞𝐫 𝐆")
+.setDescription("𝐑𝐚𝐧𝐠𝐞𝐫 𝐆")
 .setColor("BLUE")
 .setTimestamp()
-.setFooter("© SepuLtura", client.user.avatarURL)
+.setFooter("© 𝐑𝐚𝐧𝐠𝐞𝐫 𝐆 𝐁𝐨𝐭", client.user.avatarURL)
 .addField("Kullanılan RAM miktarı", `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB`)
 .addField("Toplam RAM miktarı", `${(process.memoryUsage().heapTotal / 1024 / 1024).toFixed(2)} MB`)
 .addField("Toplam sunucu sayısı", `${client.guilds.size.toLocaleString()}`)
