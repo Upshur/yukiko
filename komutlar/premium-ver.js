@@ -4,7 +4,7 @@ exports.run = async (client, message, args) => {
   if (!args[0]) {
     return message.channel.send("Lütfen bir id yazın!")
   }
-  message.channel.send("Pre aktif edildi amk!")
+  message.channel.send("Başarı İle Kullanıcıya Premiumu Verildi!")
   return db.set(`premium_${args[0]}`, "aktif")
 }
 

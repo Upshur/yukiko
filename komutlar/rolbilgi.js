@@ -11,7 +11,7 @@ exports.run = async (client, message, args) => {
   
   var cfx = new Discord.RichEmbed()
   .setTitle(`_**\`${role.name} Rolü Hakkında Bilgi:\`**_`)
-  .setFooter('(SepuLtura)', client.user.avatarURL)
+  .setFooter('(𝐑𝐚𝐧𝐠𝐞𝐫 𝐆)', client.user.avatarURL)
   .addField('Rol İsmi', role.name, true)
   .addField('Rol ID', role.id, true)
   .addField('Etiketlenebilir?', role.mentionable ? '\nEvet' : 'Hayır', true)

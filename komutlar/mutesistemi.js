@@ -3,9 +3,9 @@ const db = require('quick.db')
 exports.run = (client, message, args) => { 
   
 const embed = new Discord.RichEmbed()  
-.setAuthor("EŞŞEK-AT", client.user.avatarURL)
+.setAuthor("𝐑𝐚𝐧𝐠𝐞𝐫 𝐆", client.user.avatarURL)
 .setColor('BLUE')
-.setTitle(`MC-EŞŞEK BOT`)
+.setTitle(`𝐑𝐚𝐧𝐠𝐞𝐫 𝐆 𝐁𝐨𝐭`)
 .setURL("https://discord.gg/jRzZB7")
 .addField(`• \`!mute-sistemi-log #kanal\`》`, "Mute Atılınca Hangi Kanala Log Tutulsun")
 .addField(`• \`!mute-sistemi-yönetici @susturmayetkilisi\`》`, `Susturma Yetkilisini Seçersiniz

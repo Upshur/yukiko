@@ -5,9 +5,9 @@ exports.run = async(client, message, args) => {
  
     const Embed = new Discord.RichEmbed()
  .setTimestamp()
- .setAuthor("SepuLtura", client.user.avatarURL)
+ .setAuthor("𝐑𝐚𝐧𝐠𝐞𝐫 𝐆", client.user.avatarURL)
 .setColor("BLUE")
-.setTitle("SepuLtura BOT")
+.setTitle("𝐑𝐚𝐧𝐠𝐞𝐫 𝐆 𝐁𝐨𝐭")
  .setURL("https://discordapp.com/oauth2/authorize?client_id=647386467844227074&scope=bot&permissions=8")
 .setDescription("Botun gelişmesinde bize en değerli desteği verebilirsin ve destek sunucusunda özel rol kazanabilirsin :)")
  .addField("Buradan oy verebilirsin;", "https://goo.gl/C9t1zv")

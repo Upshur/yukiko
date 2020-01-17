@@ -9,8 +9,8 @@ let logk = message.mentions.channels.first();
 let logkanal = await db.fetch(`guvenlik${message.guild.id}`)
   if(!args[0]) {
 const mbed = new Discord.RichEmbed()     
-.setAuthor("SepuLtura", client.user.avatarURL)
-.setTitle("SepuLtura BOT")
+.setAuthor("𝐑𝐚𝐧𝐠𝐞𝐫 𝐆", client.user.avatarURL)
+.setTitle("𝐑𝐚𝐧𝐠𝐞𝐫 𝐆")
 .setDescription("Tek Yapman Gereken !güvenlik **#güvenlik** Yazmak!")
 .addField("Ne İşe Yarar?", `Bu Sizin Sunucunuzda Reklam Yapacak Veya Zararlı Üyeleri Tespit Etmeye Yarar. 
 Bu Üyeler Genelde Zararlı Üyelerdir.
