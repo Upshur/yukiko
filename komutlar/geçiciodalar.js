@@ -11,11 +11,11 @@ exports.run = async (client, message,args) => {
   
   const embed = new Discord.RichEmbed()
   .setColor("BLUE")
-  .setAuthor("SepuLtura", client.user.avatarURL)
+  .setAuthor("𝐑𝐚𝐧𝐠𝐞𝐫 𝐆 𝐁𝐎𝐓", client.user.avatarURL)
   .setTitle(message.guild.name + " GEÇİCİ ODALAR")
   .setDescription(`${aktifkanallar.join('\n')}`)
   .setTimestamp()
-  .setFooter(`© STARK-ZEHİR`, message.guild.iconURL)
+  .setFooter(`© 𝐑𝐚𝐧𝐠𝐞𝐫 𝐆`, message.guild.iconURL)
   message.channel.send(embed)
 }
 

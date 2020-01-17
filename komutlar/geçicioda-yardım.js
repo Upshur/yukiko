@@ -4,7 +4,7 @@ const db = require('quick.db')
 exports.run = async (client, message,args) => {
   
 const embed = new Discord.RichEmbed()
-     .setAuthor("SepuLtura", client.user.avatarURL)
+     .setAuthor("𝐑𝐚𝐧𝐠𝐞𝐫 𝐆 𝐁𝐎𝐓", client.user.avatarURL)
 .setColor('BLUE')
 .addField("__Geçici Oda ayarlamak__", '__**!geçici-oda-kurulum**__ 》 **Geçici Oda Sistemi Kurar.**\n Örnek: `-geçici-oda-kurulum`')
 .setTimestamp()
@@ -16,7 +16,7 @@ Geçici Oda Kurduktan Değiştirebileceğiniz Şeyler / Kategori - Oda Oluşturm
 Unutmayın Oluşturulan Geçici Odalar Oda Oluşturma Odasının Birer Kopyasıdır
 Yani Ne Yetki Ayarlarsanız Aynısını Geçici Odalarada Aktarıcaktır.
 `)
-     .setFooter('© STARK-ZEHİR',client.user.avatarURL)
+     .setFooter('© 𝐑𝐚𝐧𝐠𝐞𝐫 𝐆',client.user.avatarURL)
 
  message.channel.send(embed) 
 
