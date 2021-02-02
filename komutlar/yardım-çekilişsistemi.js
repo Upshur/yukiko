@@ -1,7 +1,7 @@
 const WestraDiscord = require('discord.js');
 const WestraClient = new WestraDiscord.Client();
-const cryptoconfig = require('../cryptoconfig.json');
-let WestraPrefix = cryptoconfig.prefix
+const ayarlar = require('../ayarlar.json');
+let Prefix = ayarlar.prefix
 let WestraGif = `https://cdn.discordapp.com/attachments/769957882166116353/769974488670011422/standard.gif`
 
 exports.run = (client, message) => {
@@ -9,11 +9,11 @@ exports.run = (client, message) => {
   .setColor(0x36393F)
  .setAuthor(`${client.user.username} | Çekiliş Sistemi Yardım Menüsü`)
  .setDescription(`
-<a:cryptobyzsyhtik:769976055715856384> **${WestraPrefix}çekiliş** \n-> Çekiliş başlatır.
-<a:cryptobyzsyhtik:769976055715856384> **${WestraPrefix}reroll** \n-> Çekilişi yeniden çeker.
-<a:cryptobyzsyhtik:769976055715856384> **${WestraPrefix}çekilişbitir** \n-> Çekilişi bitirir.
+ **${Prefix}çekiliş** \n-> Çekiliş başlatır.
+ **${Prefix}reroll** \n-> Çekilişi yeniden çeker.
+ **${Prefix}çekilişbitir** \n-> Çekilişi bitirir.
 `)
- .setFooter(`Crypto`)
+ .setFooter(`Bot`)
  .setTimestamp()
  .setImage(WestraGif)
  message.channel.send(WestraEmbed)

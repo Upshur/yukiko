@@ -8,14 +8,14 @@ module.exports = client => {
  setInterval(function() {
 }, 8000);
   var msgArray = [
-"#GeçmişOlsunİzmir",
-"#GeçmişOlsunİzmir",
-"c?yardım",
+"MaximusBoys",
+"Asreaper Önderliğinde",
+"Her Daim!",
  ];
 
  setInterval(() => {
   var rastgeleOyun = Math.floor(Math.random() * msgArray.length);
-  client.user.setActivity(`${msgArray[rastgeleOyun]}`, { type: 'STREAMING' ,  url: 'https://www.twitch.tv/dream1841' })
+  client.user.setActivity(`${msgArray[rastgeleOyun]}`, { type: 'STREAMING' ,  url: 'https://www.twitch.tv/mbasreaper' })
 }, 5000);
-    console.log(`Crypto başarıyla giriş yaptı.`);
+    console.log(`Asreaper başarıyla giriş yaptı.`);
 }

@@ -9,7 +9,7 @@ exports.run = async (client, message, args) => {
 
 const embed = new Discord.MessageEmbed()
 .setColor('RED')
-.setTitle(`<a:cryptobanned:770192497850712084> ${kullanici.tag} adlı kullanıcı banlandı.`)
+.setTitle(`< ${kullanici.tag} adlı kullanıcı banlandı.`)
 .setImage(`https://media1.tenor.com/images/d856e0e0055af0d726ed9e472a3e9737/tenor.gif?itemid=8540509`)
 message.channel.send(embed)
   message.guild.members.ban(kullanici)

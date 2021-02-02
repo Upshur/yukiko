@@ -1,9 +1,9 @@
 const Discord = require('discord.js');
-const cryptoconfig = require('./cryptoconfig.json');
+const asreapertoken = require('./ayarlar.json');
 const bot = new Discord.Client()
-const westra = new Discord.ShardingManager('./crypto.js', {
+const westra = new Discord.ShardingManager('./asreaper.js', {
     totalShards: 1,
-    token: cryptoconfig.token
+    token: asreapertoken.token
 });
 
 westra.spawn(); 

@@ -1,7 +1,7 @@
 const WestraDiscord = require('discord.js');
 const WestraClient = new WestraDiscord.Client();
-const cryptoconfig = require('../cryptoconfig.json');
-let WestraPrefix = cryptoconfig.prefix
+const ayarlar = require('../ayarlar.json');
+let WestraPrefix = ayarlar.prefix
 let WestraGif = `https://cdn.discordapp.com/attachments/769957882166116353/769974488670011422/standard.gif`
 
 exports.run = (client, message) => {

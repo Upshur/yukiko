@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const cryptoconfig = require('./cryptoconfig.json');
+const ayarlaramk = require('./ayarlar.json');
 const chalk = require("chalk");
 const moment = require("moment");
 var Jimp = require("jimp");
@@ -26,7 +26,7 @@ setInterval(() => {
 }, 280000);
 //-----------------------------------------------\\
 
-var prefix = cryptoconfig.prefix;
+var prefix = ayarlaramk.prefix;
 
 const log = message => {
   console.log(`${message}`);
