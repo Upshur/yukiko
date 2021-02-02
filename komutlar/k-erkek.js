@@ -9,17 +9,17 @@ let erkekrol = db.fetch(`erkekrol_${message.guild.id}`)
 let kayıtçı = db.fetch(`kayıtçırol_${message.guild.id}`)
 
  
-if(!message.member.roles.cache.has(kayıtçı)) return message.channel.send(`<a:cryptored:770187639801774080> Bu komudu kullanabilmen için <@&${kayıtçı}> adlı role sahip olman lazım!`)
-if(message.channel.id !== kanal) return message.channel.send(`<a:cryptored:770187639801774080> Bu komudu sadece <#${kanal}> adlı kanalda kullanabilirsin!`)
-if (!erkekrol) return message.channel.send(`<a:cryptored:770187639801774080> Sunucuda erkek rolü ayarlanmadığı için komut kullanılamaz!`)
+if(!message.member.roles.cache.has(kayıtçı)) return message.channel.send(`Bu komudu kullanabilmen için <@&${kayıtçı}> adlı role sahip olman lazım!`)
+if(message.channel.id !== kanal) return message.channel.send(` Bu komudu sadece <#${kanal}> adlı kanalda kullanabilirsin!`)
+if (!erkekrol) return message.channel.send(`Sunucuda erkek rolü ayarlanmadığı için komut kullanılamaz!`)
 
 
 let member = message.mentions.members.first();
-if (!member) return message.channel.send(`<a:cryptored:770187639801774080> Erkek olarak kayıt edeceğin kullanıcıyı belirtmelisin!`)
+if (!member) return message.channel.send(`Erkek olarak kayıt edeceğin kullanıcıyı belirtmelisin!`)
 let isim = args[1]
-if (!isim) return message.channel.send(`<a:cryptored:770187639801774080> İsmini belirtmelisin!`)
+if (!isim) return message.channel.send(` İsmini belirtmelisin!`)
 let yaş = args[2]
-if (!yaş) return message.channel.send(`<a:cryptored:770187639801774080> Yaşını belirtmelisin!`)
+if (!yaş) return message.channel.send(`Yaşını belirtmelisin!`)
 member.setNickname(`${isim} | ${yaş}`)
 member.roles.remove(alınacakrol)
 member.roles.add(erkekrol)
@@ -28,11 +28,11 @@ const başarılı = new discord.MessageEmbed()
 .setAuthor(client.user.username, client.user.avatarURL())  
 .setTitle(`${client.user.username} | Erkek Kayıt`)
 .setColor(0x36393F)
-.setDescription(`<a:cryptoonay:770187690402250772> Erkek olarak kayıt edilen kullanıcı: ${member} \n Erkek olarak kayıt eden yetkili: <@!${message.author.id}>`)
+.setDescription(` Erkek olarak kayıt edilen kullanıcı: ${member} \n Erkek olarak kayıt eden yetkili: <@!${message.author.id}>`)
 .addField(`Kullanıcının ismi:`, `${isim}`, true)
 .addField(`Kullanıcının yaşı:`, `${yaş}`, true)
 .setThumbnail(member.avatarURL)
-.setFooter(`Crypto`)
+.setFooter(`Asreaper`)
 message.channel.send(başarılı)
 db.add(`kayıtsayı_${message.author.id}`, 1)
 }

@@ -1,11 +1,10 @@
-const WestraDiscord = require('discord.js');
-const WestraClient = new WestraDiscord.Client();
+const AsreaperDiscord = require('discord.js');
+const AsreaperClient = new AsreaperDiscord.Client();
 exports.run = (client, message) => {
-  const WestraEmbed = new WestraDiscord.MessageEmbed();
-  WestraEmbed.setColor(0x36393F)
-//  WestraEmbed.setAuthor(`Crypto'yu davet ederek sunucunu yapılandır!`)
-  WestraEmbed.setDescription(`<a:cryptoonay:770187690402250772> Crypto'yu davet etmek için [buraya](https://bit.ly/cryptodavet) tıkla!`)
-  message.channel.send(WestraEmbed)
+  const AsreaperEmbed = new AsreaperDiscord.MessageEmbed();
+  AsreaperEmbed.setColor(0x36393F)
+  AsreaperEmbed.setDescription(` Asreaperi davet etmek için [buraya](Link) tıkla!`)
+  message.channel.send(AsreaperEmbed)
 }
 exports.conf = {
   enabled: true,

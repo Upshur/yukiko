@@ -6,7 +6,7 @@ exports.run = (client, message, args) => {
   westraA
     .fetchBans()
     .then(westra =>
-    message.channel.send(`<a:cryptored:770187639801774080> Sunucunuzda ${westra.size} banlanmış üye bulunmaktadır.`)
+    message.channel.send(` Sunucunuzda ${westra.size} banlanmış üye bulunmaktadır.`)
   )
     .catch(console.error);
 };

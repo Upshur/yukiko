@@ -9,15 +9,14 @@ exports.run = (client, message) => {
   .setColor(0x36393F)
  .setAuthor(`${client.user.username} | Kullanıcı Yardım Menüsü`)
  .setDescription(`
-<a:cryptobyzsyhtik:769976055715856384> **${prefix}davet** \n-> Botu davet edersiniz.
-<a:cryptobyzsyhtik:769976055715856384> **${prefix}shardbilgi** \n-> Botun shard bilgilerini gösterir.
-<a:cryptobyzsyhtik:769976055715856384> **${prefix}pp** \n-> Etiketlediğiniz kişinin avatarını gösterir.
-<a:cryptobyzsyhtik:769976055715856384> **${prefix}randompp** \n-> Botun ekli olduğu sunuculardaki her hangi birinin avatarını atar.
-<a:cryptobyzsyhtik:769976055715856384> **${prefix}öneri** \n-> Bota öneri belirtirsiniz.
-<a:cryptobyzsyhtik:769976055715856384> **${prefix}istatistik** \n-> Botun istatistiğini gösterir.
-<a:cryptobyzsyhtik:769976055715856384> **${prefix}sonmesaj** \n-> Yazdığınız son mesajı gösterir.
+ **${prefix}davet** \n-> Botu davet edersiniz.
+ **${prefix}shardbilgi** \n-> Botun shard bilgilerini gösterir.
+ **${prefix}pp** \n-> Etiketlediğiniz kişinin avatarını gösterir.
+ **${prefix}randompp** \n-> Botun ekli olduğu sunuculardaki her hangi birinin avatarını atar.
+ **${prefix}öneri** \n-> Bota öneri belirtirsiniz.
+ **${prefix}istatistik** \n-> Botun istatistiğini gösterir.
+ **${prefix}sonmesaj** \n-> Yazdığınız son mesajı gösterir.
 `)
- .setFooter(`Crypto`)
  .setTimestamp()
  .setImage(gif)
  message.channel.send(WestraEmbed)

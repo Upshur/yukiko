@@ -2,12 +2,12 @@ const Discord = require("discord.js");
 const db = require('quick.db');
 
 exports.run = async (client, message, args) => {
-if(message.author.id !== "390162986926473216") if(message.author.id !== "488384549479251969") return message.channel.send("hoop bilader sahip komutu bu");
+if(message.author.id !== "602196747879448577") if(message.author.id !== "602196747879448577") return message.channel.send("hoop bilader sahip komutu bu");
   let user = args[0]
   if (!user) {
     let e = new Discord.MessageEmbed()
     .setColor("RANDOM")
-    .setDescription("<a:cryptored:770187639801774080> Karalisteden kaldırmak istediğin kullanıcının ID'ini yaz!")
+    .setDescription(" Karalisteden kaldırmak istediğin kullanıcının ID'ini yaz!")
     message.channel.send({embed: e})
     return;
   };
@@ -19,7 +19,7 @@ if(message.author.id !== "390162986926473216") if(message.author.id !== "4883845
     .setColor("RANDOM")
     .setDescription(`<a:cryptoonay:770187690402250772> <@${user}> adlı kullanıcı başarıyla karalisteden çıkartıldı!`)
   return message.channel.send({embed: embed})
- //if (client.users.cache.get(user).send(`<a:cryptoonay:770187690402250772> <@${message.author.id}> adlı yetkilimiz tarafından beyazlisteye alındın! Artık Crypto'nun komutlarını kullanabilirsin.`)){
+ //if (client.users.cache.get(user).send(`<a:cryptoonay:770187690402250772> <@${message.author.id}> adlı yetkilimiz tarafından beyazlisteye alındın! Artık Asreaperin komutlarını kullanabilirsin.`)){
  // } else return
   
   

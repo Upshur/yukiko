@@ -23,7 +23,7 @@ let i = message.guild.shardID
     }
     message.channel.send(shardembed)
        }   catch (err) {
-    const ayarlar = require("../cryptoconfig.json");
+    const ayarlar = require("../ayarlar.json");
     const embed = new Discord.MessageEmbed()
       .setDescription(
         `Sanırım bir sorun var! Bunu yetkililere bildir!\nDestek Sunucusu: [Tıkla!](https://discord.gg/tZaxBf2z73) \nHata kodu: ${err}`

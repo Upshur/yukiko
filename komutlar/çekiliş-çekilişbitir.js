@@ -3,12 +3,12 @@ const ms = require('ms');
 exports.run = async (client, message, args) => {
     // If the member doesn't have enough permissions
     if(!message.member.hasPermission('MANAGE_MESSAGES') && !message.member.roles.cache.some((r) => r.name === "Giveaways")){
-        return message.channel.send('<a:cryptored:770187639801774080> Yetersiz yetki! gereken yetki; `MESAJLARI YÖNET`.');
+        return message.channel.send(' Yetersiz yetki! gereken yetki; `MESAJLARI YÖNET`.');
     }
 
     // If no message ID or giveaway name is specified
     if(!args[0]){
-        return message.channel.send('<a:cryptored:770187639801774080> Bir mesaj IDsi belirtmelisin!');
+        return message.channel.send(' Bir mesaj IDsi belirtmelisin!');
     }
 
     // try to found the giveaway with prize then with ID
@@ -20,7 +20,7 @@ exports.run = async (client, message, args) => {
 
     // If no giveaway was found
     if(!giveaway){
-        return message.channel.send('<a:cryptored:770187639801774080> `'+ args.join(' ') + '` adında bir çekiliş bulunamadı.');
+        return message.channel.send(' `'+ args.join(' ') + '` adında bir çekiliş bulunamadı.');
     }
 
     // Edit the giveaway
@@ -30,7 +30,7 @@ exports.run = async (client, message, args) => {
     // Success message
     .then(() => {
         // Success message
-        message.channel.send('<a:cryptoonay:770187690402250772> Çekiliş '+(client.giveawaysManager.options.updateCountdownEvery/5000)+' saniye sonra bitecek...');
+        message.channel.send(' Çekiliş '+(client.giveawaysManager.options.updateCountdownEvery/5000)+' saniye sonra bitecek...');
     })
     .catch((e) => {
         if(e.startsWith(`<a:cryptored:770187639801774080> ${giveaway.messageID} IDsi ile başlayan çekiliş zaten bitmiş!.`)){
