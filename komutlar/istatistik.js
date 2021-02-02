@@ -1,81 +1,55 @@
+
+
+
+
+
 const Discord = require('discord.js');
-const moment = require('moment')
+const   client = new Discord.Client();
+const moment = require("moment");
+const os = require('os');
+require("moment-duration-format");
+const db = require('quick.db');
+const cryptoconfig = require('../cryptoconfig.json');
+let WestraGif = `https://cdn.discordapp.com/attachments/769957882166116353/769974488670011422/standard.gif`
+//db.get"linkler" // ne yapmaya çalışıyom ben aq
 
-const ayarlar = require('../ayarlar.json');
+exports.run = async (client, message) => {
+  let linkler = await db.fetch(`linkler`)
+    const duration = moment.duration(client.uptime).format(" D [Gün], H [Saat], m [Dakika], s [Saniye]");
+    const istatistikozel = new Discord.MessageEmbed()
+    .setColor(0x36393F)
+//.setAuthor(client.user.username)
+//${db.get("linkler").length}
+ .setTitle("Crypto İstatistik")
+  .addField("• Ekibimiz •", "<@488384549479251969>\n <@390162986926473216>", true)
+  .addField("• Sürümler •", `Discord.JS: **${Discord.version}**\n Node.JS: **${process.version}**\n Discord.JS-commando: **v0.11.0-dev**`, true)
+  .addField("• Vds Bilgileri •", `Ram: **8 GB**\n İşletim Sistemi: **${os.platform()}**\n İşlemci: **${os.cpus().map(i => `${i.model}`)[0]}**\n Bit: **${os.arch()}**`)
+  .addField("• Kullanıcı Sayısı •", `${client.guilds.cache.reduce((a, b) => a + b.memberCount, 0).toLocaleString()}`,true)//${client.guilds.cache.reduce((a, b) => a + b.memberCount, 0).toLocaleString()}
+  .addField("• Sunucu Sayısı •", `${client.guilds.cache.size}`,true) 
+  .addField("• Kanal Sayısı •", `${client.channels.cache.size.toLocaleString()}`, true)
+  .addField("• Shard •", `${message.guild.shardID+1}/${client.shard.count}`,true)//Bu sunucunun shardı: ${client.shard.id} | Shard sayısı: ${client.shard.count}
+  .addField("• Ping •", `${client.ws.ping}`)
+ // .addField("• Uptime Edilen Bot Sayısı •", `${linkler.length}`)// 1dk bekle  //selamın aleyküm türk varmı
+  .addField("• Kullanılan Ram Miktarı •", `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(9)}`)
+  .addField("• Uptime Süresi •", `${duration}`)
+  .addField("• Komut Sayısı •", `${client.commands.size}`)
+ .setImage(WestraGif)
+     .setFooter(`Crypto`)
+ .setTimestamp()
+    message.channel.send(istatistikozel)
+};
 
-exports.run = (client, message, params) => {
-  let aylar = {
-			"01": "Ocak",
-			"02": "Şubat",
-			"03": "Mart",
-			"04": "Nisan",
-			"05": "Mayıs",
-			"06": "Haziran",
-			"07": "Temmuz",
-			"08": "Ağustos",
-			"09": "Eylül",
-			"10": "Ekim",
-			"11": "Kasım",
-			"12": "Aralık"
-    }
-  
-  let günler = {
-      "0": "Pazar",
-      "1": "Pazartesi",
-      "2": "Salı",
-      "3": "Çarşamba",
-      "4": "Perşembe",
-      "5": "Cuma",
-      "6": "Cumartesi",
-    }
-      var ban = message.guild.fetchBans();
- let guild = message.guild;
+exports.conf = {
+  enabled: true,
+  guildOnly: false,
+  aliases: ['istatistik', 'i', 'istatistikler', 'botbilgi', 'bilgi', 'hakkında', 'bot hakkında', 'bothakkında'],
+      kategori: "Bot",
+  permLevel: 0
+};
 
+exports.help = {
+  name: 'bilgi',
+  description: 'Bot ile ilgili bilgi verir.',
+  usage: 'bilgi'
+};
 
-
-   const embed = new Discord.RichEmbed()
-   .setColor("15f153")
-   .setAuthor(message.guild.name, message.guild.iconURL)
-   .setThumbnail(message.guild.iconURL)
-   .addField('İsim kısaltması:', message.guild.nameAcronym, true)
-   .addField('Sunucu ID:', message.guild.id, true)  
-   .addField('Ana kanal:', message.guild.defaultChannel,true)
-   .addField('AFK kanalı:', message.guild.afkChannel, true)
-   .addField('AFK Zaman Aşımı', `${message.guild.afkTimeout} saniye`,true)
-   .addField('Güvenlik Seviyesi:', message.guild.verificationLevel, true)
-   .addField('Ban Sayısı:',message.guild.fetchBans(bans => bans.size),false)
-   .addField('Kanal Sayısı: ['+message.guild.channels.size+']', `:sound: ${message.guild.channels.filter(chan => chan.type === 'voice').size} :speech_balloon: ${message.guild.channels.filter(chan => chan.type === 'text').size}`, true)
-   .addField('Üye Bilgisi : ['+message.guild.memberCount+']', `${client.emojis.get('647797624598036510')}${message.guild.members.filter(o => o.presence.status === 'offline').size} ${client.emojis.get('647797712045211673')}${message.guild.members.filter(o => o.presence.status === 'idle').size} ${client.emojis.get('647797747747127318')}${message.guild.members.filter(o => o.presence.status === 'online').size} ${client.emojis.get('647797797671927818')}${message.guild.members.filter(o => o.presence.status === 'dnd').size}`,false)
-   .addField('Sunucu Bölgesi:', message.guild.region, true) 
-   .addField('Rol sayısı',message.guild.roles.size,true)
-   .addField('Sahibi:', message.guild.owner+``+`\n(`+message.guild.ownerID+`)`, true)//elleme
-   .addField('Katılma Tarihi',  message.guild.owner.user.createdAt.toUTCString().replace("Nov", "Kasım").replace("Jan", "Ocak").replace("Feb", "Şubat").replace("Mar", "Mart").replace("Aug", "Ağustos").replace("Sep", "Eylül").replace("Oct", "Ekim").replace("Fri", "Cuma").replace("Mon", "Pazartesi").replace("Sun", "Pazar").replace("Sat", "Cumartesi").replace("Tue", "Salı").replace("Wed", "Çarşamba").replace("Thu", "Perşembe"), true)
-   
-   .addField('Oluşturma tarihi:', message.guild.createdAt.toDateString().replace("Nov", "Kasım").replace("Jan", "Ocak").replace("Feb", "Şubat").replace("Mar", "Mart").replace("Aug", "Ağustos").replace("Sep", "Eylül").replace("Oct", "Ekim").replace("Fri", "Cuma").replace("Mon", "Pazartesi").replace("Sun", "Pazar").replace("Sat", "Cumartesi").replace("Tue", "Salı").replace("Wed", "Çarşamba").replace("Thu", "Perşembe"), true)
-  .setTimestamp()
-
- 
-   const roller = new Discord.RichEmbed()
-   .setColor('15f153')
-   .setDescription(`Tüm Roller: `+message.guild.roles.filter(r => r.name).map(r => r).join(', '))
-   
-   const emojiler = new Discord.RichEmbed()
-   .setColor('15f153')
-   .setDescription(`Tüm Emojiler:`+ message.guild.emojis.map(e=>e.toString()).join(" "))
-   message.channel.send({embed});
-   message.channel.send(roller);
-   message.channel.send(emojiler)
- };
-
- exports.conf = {
-   enabled: true,
-   guildOnly: false,
-   aliases: ["istatistik"],
-   permLevel: 0
- };
-
- exports.help = {
-   name: 'sunucubilgi',
-   description: 'Kullanılan Yerdeki Sunucu Bilgilerini Gösterir.',
-   usage: 'bilgi'
- };

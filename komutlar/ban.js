@@ -1,36 +1,31 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();
-//ONLY CODE
-exports.run = (client, message, args) => {
-  if (!message.guild) {
-  const ozelmesajuyari = new Discord.RichEmbed()
-  .setColor(0xFF0000)
-  .setTimestamp()
-  .setAuthor(message.author.username, message.author.avatarURL)
-  .addField(':x: Bu komut özel mesajlarda kullanıma kapatılmıştır.')
-  return message.author.sendEmbed(ozelmesajuyari); }
-//ONLY CODE
-  let guild = message.guild
-  let sebep = args.slice(1).join(' ');
-  let user = message.mentions.users.first();
-  if (sebep.length < 1) return message.channel.send('Yasaklama sebebini yazmalısın.');
-  if (message.mentions.users.size < 1) return message.channel.send('Kimi banlayacağını yazmalısın.').catch(console.error);
-//ONLY CODE
-  if (!message.guild.member(user).bannable) return message.channel.send('Banlamaya çalıştığın kullanıcının benden yüksek yetkisi var, lütfen yetkimi yükselt ve tekrar dene.');
-  message.guild.ban(user, 2);
-  return message.channel.send(`${user.username}#${user.discriminator} adlı kullanıcıyı ${sebep} sebebiyle sunucudan yasakladın!`);
-  user.send(`${guild.name} sunucusunda ${sebep} nedeniyle sunucudan yasaklandın!`)
-};
-//ONLY CODE
-exports.conf = {
-  enabled: true,
-  guildOnly: true,
-  aliases: ['ban', 'banla', 'yasakat'],
-  permLevel: 0
-};
-//ONLY CODE
-exports.help = {
-  name: 'yasakla',
-  description: 'İstediğiniz kişiyi sunucudan yasaklar.',
-  usage: 'yasakla [kullanıcı] [sebep]'
-};
+exports.run = async (client, message, args) => {
+  
+   if (!message.member.hasPermission("BAN_MEMBERS"))
+    return message.channel.send(`<a:cryptored:770187639801774080> Bu komutu kullanabilmek için \`Üyeleri Yasakla\` yetkisine sahip olmalısın!`);
+  
+ let kullanici = message.mentions.users.first()
+ if(!kullanici) return message.channel.send("<a:cryptored:770187639801774080> Banlayacağın kişiyi etiketlemelisin!")
+
+const embed = new Discord.MessageEmbed()
+.setColor('RED')
+.setTitle(`<a:cryptobanned:770192497850712084> ${kullanici.tag} adlı kullanıcı banlandı.`)
+.setImage(`https://media1.tenor.com/images/d856e0e0055af0d726ed9e472a3e9737/tenor.gif?itemid=8540509`)
+message.channel.send(embed)
+  message.guild.members.ban(kullanici)
+}
+
+    exports.conf = {
+        enabled: true,
+        guildOnly: false,
+        aliases: [],
+        permLevel: 0,
+    kategori: "moderasyon",
+    };
+      
+    exports.help = {
+        name: 'ban',
+        description: 'ban',
+        usage: 'ban',
+    
+    };

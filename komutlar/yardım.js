@@ -1,55 +1,30 @@
-const Discord = require('discord.js'); 
- 
-exports.run = async(client, message, args) => {
- 
- const Embed = new Discord.RichEmbed()
- .setTimestamp()
- .setAuthor("𝐑𝐚𝐧𝐠𝐞𝐫 𝐆", client.user.avatarURL)
-.setColor("BLUE")
-.setTitle("𝐑𝐚𝐧𝐠𝐞𝐫 𝐆 𝐁𝐎𝐓")
- .setURL("https://discordapp.com/oauth2/authorize?client_id=647386467844227074&scope=bot&permissions=8")
- .setDescription(`
-
-**-yardım**, ile yardım alabilirsiniz.
-Örnek komut kullanımı: \`-küfüraç\`
-Botu davet etmek için: \`-davet\`
-`)
- .addField("-komutlar (13)", `
-herkesin kullanabileceği standart komutlar;
-\`botbilgi\`,\`davet\`,\`oyver\`,\`gold\`,\`sunucu-pp\`,\`profil\`,\`kredim\`,\`p-market\`,\`p-menü\`,\`puanım\`,\`ayarlar\`
-`)
- .addField("-eğlence (9)", `
-herkesin kullanabileceği eğlence komutları;
-\`aşk\`,\`token\`,\`tokat\`
-`)
- 
- .addField("-moderasyon (13)", `
-yetkililer için moderasyon komutları;
-\`Küfür Aç\`,\`Reklam Aç\`,\`Link Engel Aç\`,\`Reklam Kick Aç\`,\`Reklam İsim Ban Aç\`,\`Otorol\`,\`Sayaç\`,\`Ban Koruma Sistemi\`,\`Duyuru\`,\`Oto Cevap\`,\`Mute Sistemi\`,\`Anti Raid Bot Sistemi\`
-`)
- 
- .addField("-moderasyon 2 (12)", `
-yetkililer için moderasyon komutlarının 2. bölümü;
-\`sil\`,\`reklam taraması\`,\`resimli hg bb\`,\`sunucu tanıt\`,\`oto bot silici\`,\`ultra sohbet temizleyici\`,\`yavaş mod\`,\`duyuru\`,\`tag sistemi\`,\`rol sistemi\`,\`geçici oda sistemi\`,\`kayıt sistemi\`
-`)
- 
- .addField("-koruma (5)", `
-Sunucunuz İçin Koruma Sistemleri.
-\`sağ tık ban koruması\`,\`kanal silme koruması\`,\`rol silme koruması\`,\`sunucuya bot sokma koruması\`,\`güvenlik odası\`
-`)
- .setFooter("SepuLtura", client.user.avatarURL)
- message.channel.send(Embed)
+const Discord = require('discord.js')
+const client = new Discord.Client()
+const db = require('quick.db')
+exports.run = (client, message, args, member) => {
+const yardım = new Discord.MessageEmbed()
+  .setAuthor(`Crypto Yardım Menüsü`, client.user.avatarURL())
+  .setColor("0x36393F")
+  .setThumbnail(client.user.avatarURL())
+  .setDescription(`• Hey! <@${message.author.id}> beni kullandığın için teşekkür ederim!\n •  Prefixim: **c?**\n • Dilim: **TR** :flag_tr:\n • Üyelik durumu: ${db.has(`üyelikk_${message.author.id}`, "üyelik") ? `**Gold üye!**` : `**Normal üye!**`}`)
+  .addField(" • Kategoriler:", `> • [c?kullanıcı](https://discord.gg/usg73fH): **Kullanıcı yardım menüsünü gösterir.**\n > • [c?moderasyon](https://discord.gg/usg73fH): **Moderasyon yardım menüsünü gösterir.**\n > • [c?davetsistemi](https://discord.gg/usg73fH): ** Davet sistemi yardım menüsünü gösterir.**\n > • [c?kayıtsistemi](https://discord.gg/usg73fH): ** Kayıt sistemi yardım menüsünü gösterir.**\n > • [c?korumasistemi](https://discord.gg/usg73fH): ** Koruma sistemi yardım menüsünü gösterir.**\n > • [c?logosistemi](https://discord.gg/usg73fH): ** Logo sistemi yardım menüsünü gösterir.**\n > • [c?botlistsistemi](https://discord.gg/usg73fH): ** Bot list sistemi yardım menüsünü gösterir.**\n > • [c?çekilişsistemi](https://discord.gg/usg73fH): ** Çekiliş sistemi yardım menüsünü gösterir.**`)
+  .addField(" • Güncelleme Notları:", "**Güncelleme v0.4:** Çekiliş sistemi eklendi!")
+  //.addField("• Sponsor:", `• Bize sponsor olan **Önem Bilişim**'e teşekkür ederiz! [Sunucu](https://discord.gg/FNnUg6z) • [Site](https://www.onembilisim.com/)`)
+  .addField(" • Linkler:", "• [Davet Et](https://discord.com/oauth2/authorize?client_id=727962543347335179&permissions=8&scope=bot/) • [Destek Sunucusu](https://discord.gg/usg73fH) • [Web Site](https://www.cryptosite.cf/) •")
+  .setImage("https://cdn.discordapp.com/attachments/769957882166116353/769974488670011422/standard.gif")
+.setFooter("Crypto", message.author.avatarURL())
+.setTimestamp()
+  message.channel.send(yardım)
+}
+exports.conf = {
+    enabled: true,
+    guildOnly: false,
+    aliases: ["y", "help", "h"],
+    permLevel: 0
 }
 
-module.exports.conf = {
-  enabled: true,
-  guildOnly: false,
-  aliases: ["yardım","help","h","help"],
-  permLevel: 0
-};
-
-module.exports.help = {
-  name: 'yardım',
-  description: 'Yardım Menüsünü Gösterir.',
-  usage: 'yardım'
-};
+exports.help = {
+    name: "yardım",
+    description: "westra",
+    usage: "westra"
+}
