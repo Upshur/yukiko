@@ -1,5 +1,5 @@
 const Discord = require("discord.js")
-const ayarlar = require("../cryptoconfig.json")
+const ayarlar = require("../ayarlar.json")
 const db = require("quick.db")
 module.exports = message => {
   let client = message.client;

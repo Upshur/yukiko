@@ -1,9 +1,9 @@
 const Discord = require('discord.js');
-const asreapertoken = require('./ayarlar.json');
+const asreaper = require('./ayarlar.json');
 const bot = new Discord.Client()
 const westra = new Discord.ShardingManager('./asreaper.js', {
     totalShards: 1,
-    token: asreapertoken.token
+    token: asreaper.token
 });
 
 westra.spawn(); 
