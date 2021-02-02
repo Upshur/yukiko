@@ -2,7 +2,7 @@ const WestraDiscord = require('discord.js');
 const WestraClient = new WestraDiscord.Client();
 const ayarlar = require('../ayarlar.json');
 let prefix = ayarlar.prefix
-let gif = `https://cdn.discordapp.com/attachments/769957882166116353/769974488670011422/standard.gif`
+let gif = `GİF`
 
 exports.run = (client, message) => {
  const WestraEmbed = new WestraDiscord.MessageEmbed()
@@ -12,7 +12,7 @@ exports.run = (client, message) => {
  **${prefix}arrow** \n-> Ok şeklinde logo yapar.
  **${prefix}gold** \n-> Altın şeklinde logo yapar.
  **${prefix}green** \n-> Yeşil şeklinde logo yapar.
- **${prefix}graffiti** \n-> Graffiti şeklinde logo yapar.
+ **${prefix}grafiti** \n-> Graffiti şeklinde logo yapar.
 `)
  .setTimestamp()
  .setImage(gif)

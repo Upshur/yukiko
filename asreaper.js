@@ -17,7 +17,7 @@ const http = require("http");
 const express = require("express");
 const app = express();
 app.get("/", (request, response) => {
-  console.log("Crypto pinglendi.");
+  console.log("Asreaper pinglendi.");
   response.sendStatus(200);
 });
 //app.listen(8000);
@@ -105,7 +105,7 @@ client.elevation = message => {
   let permlvl = 0;
   if (message.member.hasPermission("BAN_MEMBERS")) permlvl = 2;
   if (message.member.hasPermission("ADMINISTRATOR")) permlvl = 3;
-  if (message.author.id === cryptoconfig.sahip) permlvl = 4;
+  if (message.author.id === ayarlaramk.sahip) permlvl = 4;
   return permlvl;
 };
 
@@ -122,7 +122,7 @@ client.on("error", e => {
   console.log(chalk.bgRed(e.replace(regToken, "that was redacted")));
 });
 
-client.login(cryptoconfig.token)
+client.login(ayarlaramk.token)
 
 ///==========komutlar==========\\\
 
@@ -183,9 +183,9 @@ client.on("message", msg => {
 
 
    const saasembed = new Discord.MessageEmbed()
-.setDescription('<a:cryptosiyahhalka:769956810785947669> Aleyküm selam. Hoş geldin!')
+.setDescription(' Aleyküm selam. Hoş geldin!')
 .setTimestamp()
-.setFooter('Crypto')
+.setFooter('Asreaper')
 .setColor(0x36393E)
    
  client.on("message", async msg => {
@@ -787,11 +787,11 @@ client.on("messageUpdate", async (old, nev) => {
       if (küfür.some(word => nev.content.includes(word))) {
       if (nev.member.hasPermission("BAN_MEMBERS")) return ;
        //if (ayarlar.gelistiriciler.includes(nev.author.id)) return ;
- const embed = new Discord.MessageEmbed() .setColor(0x36393F) .setDescription(`<a:cryptored:770187639801774080> ${nev.author} , **Mesajını editleyerek küfür etmeye çalıştı!**`)
+ const embed = new Discord.MessageEmbed() .setColor(0x36393F) .setDescription(` ${nev.author} , **Mesajını editleyerek küfür etmeye çalıştı!**`)
             .addField("Mesajı:",nev)
         
             nev.delete();
-            const embeds = new Discord.MessageEmbed() .setColor(0x36393F) .setDescription(`<a:cryptored:770187639801774080> ${nev.author} , **Mesajı editleyerek küfür etmene izin veremem!**`) 
+            const embeds = new Discord.MessageEmbed() .setColor(0x36393F) .setDescription(` ${nev.author} , **Mesajı editleyerek küfür etmene izin veremem!**`) 
           client.channels.cache.get(y).send(embed)
             nev.channel.send(embeds).then(msg => msg.delete({timeout:5000}));
           
@@ -816,9 +816,9 @@ client.on("message", async msg => {
                  if (!msg.member.hasPermission("MANAGE_GUILD")) {
                  //  if (!ayarlar.gelistiriciler.includes(msg.author.id)) return ;
      msg.delete({timeout:750});
-                    const embeds = new Discord.MessageEmbed() .setColor(0x36393F) .setDescription(`<a:cryptored:770187639801774080> <@${msg.author.id}> , **Bu sunucuda küfür yasak!**`)
+                    const embeds = new Discord.MessageEmbed() .setColor(0x36393F) .setDescription(` <@${msg.author.id}> , **Bu sunucuda küfür yasak!**`)
       msg.channel.send(embeds).then(msg => msg.delete({timeout: 5000}));
-                const embed = new Discord.MessageEmbed() .setColor(0x36393F) .setDescription(`<a:cryptored:770187639801774080> ${msg.author} , **Küfür etmeye çalıştı!**`) .addField("Mesajı:",msg)
+                const embed = new Discord.MessageEmbed() .setColor(0x36393F) .setDescription(` ${msg.author} , **Küfür etmeye çalıştı!**`) .addField("Mesajı:",msg)
                client.channels.cache.get(y).send(embed)
                   }              
                 } catch(err) {
@@ -862,10 +862,10 @@ client.on("guildMemberAdd", member => {
   var kontrol = [];
 
   if (ayyy < 1) {
-    kontrol = "**Şüpheli** <a:cryptored:770187639801774080>";
+    kontrol = "**Şüpheli** ";
   }
   if (ayyy > 1) {
-    kontrol = "**Güvenilir** <a:cryptoonay:770187690402250772>";
+    kontrol = "**Güvenilir** ";
   }
 
   if (!kanal) return;
@@ -890,17 +890,17 @@ client.on("guildMemberAdd", member => {
     )
 
  //
-  .setDescription(`<a:cryptowelcm1:770584763336622090><a:cryptowelcm2:770584759340105738> **Hoş geldin!** ${
+  .setDescription(` **Hoş geldin!** ${
         member.user
       }, seninle beraber **${
         guild.memberCount
-      }** kişi olduk! \n <a:cryptoelms:770585154204729356> Kaydının yapılması için **isim** ve **yaş** yazman gerek. \n <a:cryptoyuklnyr:770585554483806248> Hesap kuruluş tarihi: **${moment(
+      }** kişi olduk! \n  Kaydının yapılması için **isim** ve **yaş** yazman gerek. \n  Hesap kuruluş tarihi: **${moment(
         user.createdAt
       ).format("DD")} ${aylar[moment(user.createdAt).format("MM")]} ${moment(
         user.createdAt
       ).format(
         "YYYY HH:mm:ss"
-       )}** \n <a:cryptoyklnyr2:770585976518475777> Bu vatandaş: ${kontrol} \n <a:cryptosagok:770586298771701810> <@&${kayıtçı}> rolündeki yetkililer sizinle ilgilenecektir.`);
+       )}** \n  Bu vatandaş: ${kontrol} \n  <@&${kayıtçı}> rolündeki yetkililer sizinle ilgilenecektir.`);
   //
   client.channels.cache.get(kanal).send(embed);
   client.channels.cache.get(kanal).send(`<@&${kayıtçı}>`);
@@ -934,7 +934,7 @@ const sayı = await db.fetch(`mesaj.${message.guild.id}.${message.author.id}`);
 if(Date.now() < maxTime) {
   const westraaaaam = new Discord.MessageEmbed()
   .setColor(0x36393F)
-  .setDescription(`<a:cryptored:770187639801774080> <@${message.author.id}> , **Bu sunucuda spam yapmak yasak!**`)
+  .setDescription(` <@${message.author.id}> , **Bu sunucuda spam yapmak yasak!**`)
  // .setFooter(`Bu mesaj otomatik olarak silinecektir.`)
  if (message.member.hasPermission("BAN_MEMBERS")) return ;
  message.channel.send(westraaaaam).then(msg => msg.delete({timeout: 1500}));
@@ -990,11 +990,11 @@ if (i) {
 if (reklam.some(word => nev.content.includes(word))) {
 if (nev.member.hasPermission("BAN_MEMBERS")) return ;
  //if (ayarlar.gelistiriciler.includes(nev.author.id)) return ;
-const embed = new Discord.MessageEmbed() .setColor(0x36393F) .setDescription(`<a:cryptored:770187639801774080> ${nev.author} , **Mesajını editleyerek reklam yapmaya çalıştı!**`)
+const embed = new Discord.MessageEmbed() .setColor(0x36393F) .setDescription(` ${nev.author} , **Mesajını editleyerek reklam yapmaya çalıştı!**`)
       .addField("Mesajı:",nev)
   
       nev.delete();
-      const embeds = new Discord.MessageEmbed() .setColor(0x36393F) .setDescription(`<a:cryptored:770187639801774080> ${nev.author} , **Mesajı editleyerek reklam yapamana izin veremem!**`) 
+      const embeds = new Discord.MessageEmbed() .setColor(0x36393F) .setDescription(` ${nev.author} , **Mesajı editleyerek reklam yapamana izin veremem!**`) 
     client.channels.cache.get(y).send(embed)
       nev.channel.send(embeds).then(msg => msg.delete({timeout:5000}));
     
@@ -1019,9 +1019,9 @@ let i = await db.fetch(`reklam.${msg.member.guild.id}.durum`);
            if (!msg.member.hasPermission("MANAGE_GUILD")) {
            //  if (!ayarlar.gelistiriciler.includes(msg.author.id)) return ;
 msg.delete({timeout:750});
-              const embeds = new Discord.MessageEmbed() .setColor(0x36393F) .setDescription(`<a:cryptored:770187639801774080> <@${msg.author.id}> , **Bu sunucuda reklam yapmak yasak!**`)
+              const embeds = new Discord.MessageEmbed() .setColor(0x36393F) .setDescription(` <@${msg.author.id}> , **Bu sunucuda reklam yapmak yasak!**`)
 msg.channel.send(embeds).then(msg => msg.delete({timeout: 5000}));
-          const embed = new Discord.MessageEmbed() .setColor(0x36393F) .setDescription(`<a:cryptored:770187639801774080> ${msg.author} , **Reklam yapmaya çalıştı!**`) .addField("Mesajı:",msg)
+          const embed = new Discord.MessageEmbed() .setColor(0x36393F) .setDescription(` ${msg.author} , **Reklam yapmaya çalıştı!**`) .addField("Mesajı:",msg)
          client.channels.cache.get(y).send(embed)
             }              
           } catch(err) {
@@ -1037,7 +1037,7 @@ msg.channel.send(embeds).then(msg => msg.delete({timeout: 5000}));
 
 // davet sistemi
 
-const ayarlar = require('./cryptoconfig.json');
+const ayarlar = require('./ayarlar.json');
 const Database = require("./Helpers/Database");
 
 
@@ -1109,9 +1109,9 @@ client.on("guildMemberAdd", (member) => {
         if(channel){
           const westraderselamunaleykümasdkasdlksdalkasdlk = new Discord.MessageEmbed()
           .setColor("BLUE")
-          .setFooter("Crypto")
+          .setFooter("Asreaper")
           .setTimestamp()
-          .setDescription(`<a:cryptoonay:770187690402250772> ${member} adlı kişi sunucuya katıldı. Davet eden şahıs: **${invite.inviter.tag}** (**${total + bonus}** davet!)`)
+          .setDescription(` ${member} adlı kişi sunucuya katıldı. Davet eden şahıs: **${invite.inviter.tag}** (**${total + bonus}** davet!)`)
        channel.send(westraderselamunaleykümasdkasdlksdalkasdlk)
         }
     }).catch();
@@ -1142,9 +1142,9 @@ client.on("guildMemberRemove", (member) => {
         let user = client.users.cache.get(data.inviter)
           const westraderselamunaleykümasdkasdlksdalkasdlasdjkasdlkasdjasdljaksdjklasdkljasdjlkasdlkk = new Discord.MessageEmbed()
           .setColor("BLUE")
-          .setFooter("Crypto")
+          .setFooter("Asreaper")
           .setTimestamp()
-          .setDescription(`<a:cryptored:770187639801774080> ${member.user.tag} sunucudan ayrıldı. Şahsı davet eden: **${user.tag}** (**${Number(total) + Number(bonus)}** davet!)`)
+          .setDescription(` ${member.user.tag} sunucudan ayrıldı. Şahsı davet eden: **${user.tag}** (**${Number(total) + Number(bonus)}** davet!)`)
      	channel.send(westraderselamunaleykümasdkasdlksdalkasdlasdjkasdlkasdjasdljaksdjklasdkljasdjlkasdlkk)
      }
 });
@@ -1184,7 +1184,7 @@ client.on("message", async msg => {
       if (msg.author.bot) return;
       if(msg.content.size > 32){
         var embed = new Discord.MessageEmbed()
-        .setAuthor(`Crypto`,`${msg.author.avatarURL() || msg.author.displayAvatarURL()}`)
+        .setAuthor(`Asreaper`,`${msg.author.avatarURL() || msg.author.displayAvatarURL()}`)
         .setDescription(`<a:gold1:719860487734427708> Hizzaya Geçin! Burada Bir Gold Üye Belirdi! <@${msg.author.id}>`)
         .setColor("GOLD")
         msg.channel.send(embed).then(msg => {msg.delete({ timeout: 5000 })}).catch(console.error);
@@ -1197,12 +1197,11 @@ client.on("message", async msg => {
 */
 // gold hg bitiş
 
-// crypto tepki 
 const wiodb = require('wio.db');
 client.on('message', message => {
   if(message.channel.type !== 'text') return;
   let mesaj = message.content.toLocaleLowerCase();
-if(mesaj.includes('crypto')) message.react('735884191547392100');
+if(mesaj.includes('Asreaper')) message.react('735884191547392100');
 })
 
 // uptime sistemi
@@ -1215,15 +1214,12 @@ if(mesaj.includes('crypto')) message.react('735884191547392100');
   var link = args[1]
 if(!link) return;
 const  links = wiodb.fetch("uptime");
-if(!link.startsWith('https://')) return message.channel.send('<a:cryptored:770187639801774080> Bu bir link değil.')
   if(links == null) await wiodb.set("uptime",[])
 let map = []
   var x = links
 for(var i in x) {
-  if(x[i].url.includes(link)) return message.channel.send("<a:cryptored:770187639801774080> Link sistemde zatem bulunmakta.")
    
 }
-    message.channel.send("<a:cryptoonay:770187690402250772> Link sisteme başarıyla eklenmiştir.");
    
     
     wiodb.push("uptime",{url:link})
@@ -1278,8 +1274,8 @@ client.on("guildMemberAdd", async member => {
 const benwestranasilsinizefenimmmmasdasd = new Discord.MessageEmbed()
 .setColor("BLUE")
 .setTimestamp()
-.setFooter(`Crypto`)
-.setDescription( "<a:cryptoonay:770187690402250772> **" +
+.setFooter(`Asreaper`)
+.setDescription( " **" +
           member.user.username +
           "** hoş geldin! Otomatik rolün verildi. Seninle beraber **" +
           member.guild.memberCount +

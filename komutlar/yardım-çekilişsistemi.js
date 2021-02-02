@@ -2,7 +2,7 @@ const WestraDiscord = require('discord.js');
 const WestraClient = new WestraDiscord.Client();
 const ayarlar = require('../ayarlar.json');
 let Prefix = ayarlar.prefix
-let WestraGif = `https://cdn.discordapp.com/attachments/769957882166116353/769974488670011422/standard.gif`
+let AsreaperGif = `GİF`
 
 exports.run = (client, message) => {
  const WestraEmbed = new WestraDiscord.MessageEmbed()
@@ -13,9 +13,9 @@ exports.run = (client, message) => {
  **${Prefix}reroll** \n-> Çekilişi yeniden çeker.
  **${Prefix}çekilişbitir** \n-> Çekilişi bitirir.
 `)
- .setFooter(`Bot`)
+ .setFooter(`Asreaper Bot`)
  .setTimestamp()
- .setImage(WestraGif)
+ .setImage(AsreaperGif)
  message.channel.send(WestraEmbed)
 }
 exports.conf = {

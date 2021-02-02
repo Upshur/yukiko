@@ -4,7 +4,7 @@ const Discord = require("discord.js"),
 module.exports.run = async (client, message, args) => {
 	 if(message.author.id !== message.guild.owner.user.id) return message.reply(' Bu komutu kullanabilmek için **Sunucu Sahibi** olmalısın!')
   let kontrol = await db.fetch(`dil_${message.guild.id}`);
-  let prefix = (await db.fetch(`prefix_${message.guild.id}`)) || "c?";
+  let prefix = (await db.fetch(`prefix_${message.guild.id}`)) || "!";
   if (kontrol == "agayokaga") {
     let kanal = message.mentions.channels.first();
     if (!kanal) {

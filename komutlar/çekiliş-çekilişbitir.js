@@ -33,11 +33,11 @@ exports.run = async (client, message, args) => {
         message.channel.send(' Çekiliş '+(client.giveawaysManager.options.updateCountdownEvery/5000)+' saniye sonra bitecek...');
     })
     .catch((e) => {
-        if(e.startsWith(`<a:cryptored:770187639801774080> ${giveaway.messageID} IDsi ile başlayan çekiliş zaten bitmiş!.`)){
-            message.channel.send('<a:cryptored:770187639801774080> Bu çekiliş zaten bitmiş!');
+        if(e.startsWith(` ${giveaway.messageID} IDsi ile başlayan çekiliş zaten bitmiş!.`)){
+            message.channel.send(' Bu çekiliş zaten bitmiş!');
         } else {
             console.error(e);
-            message.channel.send('<a:cryptored:770187639801774080> Hata...');
+            message.channel.send(' Hata...');
         }
     });
 

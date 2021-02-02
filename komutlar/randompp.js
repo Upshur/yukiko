@@ -3,7 +3,6 @@ exports.run = (client, message) => {
   const WestraEmbed = new WestraDiscord.MessageEmbed()
   .setColor("BLUE")
   .setTimestamp()
-  .setFooter("Crypto")
   .setImage(client.users.cache.random().displayAvatarURL({ display: true, dynamic: true }))
   message.channel.send(WestraEmbed)
 }

@@ -17,9 +17,9 @@ if(message.author.id !== "602196747879448577") if(message.author.id !== "6021967
   
   let embed = new Discord.MessageEmbed()
     .setColor("RANDOM")
-    .setDescription(`<a:cryptoonay:770187690402250772> <@${user}> adlı kullanıcı başarıyla karalisteden çıkartıldı!`)
+    .setDescription(`<@${user}> adlı kullanıcı başarıyla karalisteden çıkartıldı!`)
   return message.channel.send({embed: embed})
- //if (client.users.cache.get(user).send(`<a:cryptoonay:770187690402250772> <@${message.author.id}> adlı yetkilimiz tarafından beyazlisteye alındın! Artık Asreaperin komutlarını kullanabilirsin.`)){
+ //if (client.users.cache.get(user).send(` <@${message.author.id}> adlı yetkilimiz tarafından beyazlisteye alındın! Artık Asreaperin komutlarını kullanabilirsin.`)){
  // } else return
   
   

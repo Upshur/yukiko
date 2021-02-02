@@ -7,14 +7,14 @@ exports.run = async (client, message, args) => {
   if (!user) {
     let e = new Discord.MessageEmbed()
     .setColor("RANDOM")
-    .setDescription("<a:cryptored:770187639801774080> Karalisteye almak istediğin kullanıcının id sini yaz!")
+    .setDescription(" Karalisteye almak istediğin kullanıcının id sini yaz!")
     message.channel.send({embed: e})
     return;
   };
   if(!sebep){
     let e = new Discord.MessageEmbed()
     .setColor("RANDOM")
-    .setDescription("<a:cryptored:770187639801774080> Lütfen karalisteye almak için bir sebep belirtin!")
+    .setDescription(" Lütfen karalisteye almak için bir sebep belirtin!")
     message.channel.send({embed: e})
     return;
   }
@@ -25,13 +25,13 @@ exports.run = async (client, message, args) => {
   
   let embed = new Discord.MessageEmbed()
     .setColor("RANDOM")
-    .setDescription(`<a:cryptored:770187639801774080> <@${user}> adlı kullanıcı başarıyla **${sebep}** sebebiyle karalisteye alındı!`)
+    .setDescription(` <@${user}> adlı kullanıcı başarıyla **${sebep}** sebebiyle karalisteye alındı!`)
     message.channel.send({embed: embed})
   const westrabumm = new Discord.MessageEmbed()
   .setColor("RED")
   .setFooter("Crypto")
   .setTimestamp()
-  .setDescription(`<a:cryptored:770187639801774080> <@${message.author.id}> adlı yetkilimiz tarafından karalisteye alındın! Artık Crypto'nun komutlarını kullanamazsın. Karalisteye alınma sebebin: **${sebep}**`)
+  .setDescription(` <@${message.author.id}> adlı yetkilimiz tarafından karalisteye alındın! Artık Crypto'nun komutlarını kullanamazsın. Karalisteye alınma sebebin: **${sebep}**`)
   if (client.users.cache.get(user).send(westrabumm)){
   } else return
   
