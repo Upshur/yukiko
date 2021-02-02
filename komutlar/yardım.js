@@ -7,7 +7,7 @@ const yardım = new Discord.MessageEmbed()
   .setColor("0x36393F")
   .setThumbnail(client.user.avatarURL())
   .setDescription(`• Hey! <@${message.author.id}> beni kullandığın için teşekkür ederim!\n •  Prefixim: **!**\n • Dilim: **TR** :flag_tr:\n • Üyelik durumu: ${db.has(`üyelikk_${message.author.id}`, "üyelik") ? `**Gold üye!**` : `**Normal üye!**`}`)
-  .addField(" • Kategoriler:", `> • [!kullanıcı](Link): **Kullanıcı yardım menüsünü gösterir.**\n > • [!moderasyon](Link): **Moderasyon yardım menüsünü gösterir.**\n > • [davetsistemi](Link): ** Davet sistemi yardım menüsünü gösterir.**\n > • [!kayıtsistemi](Link): ** Kayıt sistemi yardım menüsünü gösterir.**\n > • [!korumasistemi](Link): ** Koruma sistemi yardım menüsünü gösterir.**\n > • [!logosistemi](Link): ** Logo sistemi yardım menüsünü gösterir.**\n > • [c?botlistsistemi](https://discord.gg/usg73fH): ** Bot list sistemi yardım menüsünü gösterir.**\n > • [c?çekilişsistemi](https://discord.gg/usg73fH): ** Çekiliş sistemi yardım menüsünü gösterir.**`)
+  .addField(" • Kategoriler:", `> • [!kullanıcı](Link): **Kullanıcı yardım menüsünü gösterir.**\n > • [!moderasyon](Link): **Moderasyon yardım menüsünü gösterir.**\n > • [!kayıtsistemi](Link): ** Kayıt sistemi yardım menüsünü gösterir.**\n > • [!korumasistemi](Link): ** Koruma sistemi yardım menüsünü gösterir.**\n > • [!logosistemi](Link): ** Logo sistemi yardım menüsünü gösterir.**\n > • [!çekilişsistemi](Link): ** Çekiliş sistemi yardım menüsünü gösterir.**`)
   .addField(" • Güncelleme Notları:", "**Güncelleme v0.4:** Çekiliş sistemi eklendi!")
 
   .addField(" • Linkler:", "• [Davet Et](Link) • [Destek Sunucusu](Link) • [Web Site](Link) •")

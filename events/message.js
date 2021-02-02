@@ -25,14 +25,14 @@ module.exports = message => {
     .setColor("0x36393F")
    .setTitle('KOMUTLARI KULLANAMAZSINIZ!')
   .setDescription(`Üzgünüm ancak komutları kullanamazsınız! Kurucularımız tarafından **${karalistesebep}** sebebiyle komutları kullanmanız yasaklandı!.`)
-   .setFooter(`Asreaper'dan engellendiniz.`)
+   .setFooter(`Crypto'dan engellendiniz.`)
    .setImage("https://img.artigercek.com/uploads/1/0/7pOJ1lYcS2P0bKjoHMFpFC4xAT7bD3JnNSmjY4wJ.jpeg")
    .setThumbnail(client.user.avatarURL())
    
    const westrabencanımbro = new Discord.MessageEmbed()
    .setColor("BLUE")
    .setTimestamp()
-   .setFooter(`Asreaper`)
+   .setFooter(`Crypto`)
    .setDescription("**"+message.author.tag+"** adlı kullanıcı karalistede olup **"+command+"** adlı komutu: **"+message.guild.name+"** sunucusunda kullanmayı denedi.")
    client.channels.cache.get("771401212712583188").send(westrabencanımbro)
   return message.channel.send(karaliste)
@@ -41,12 +41,10 @@ module.exports = message => {
        const westrabencanımbrosadadsasd = new Discord.MessageEmbed()
    .setColor("BLUE")
    .setTimestamp()
-   .setFooter(`Asreaper`)
+   .setFooter(`Crypto`)
    .setDescription("**"+message.author.tag+"** adlı kullanıcı **"+command+"** adlı komutu: **"+message.guild.name+"** sunucusunda kullandı.")
        
        
- client.channels.cache.get("771401212712583188").send(westrabencanımbrosadadsasd)
-
     //wqerewq
    if (cmd.conf.enabled === false) {
       if (!ayarlar.sahip.includes(message.author.id) && !ayarlar.sahip.includes(message.author.id)) {

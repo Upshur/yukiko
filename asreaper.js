@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const cryptoconfig = require('./ayarlar.json');
+const asreaper = require('./ayarlar.json');
 const chalk = require("chalk");
 const moment = require("moment");
 var Jimp = require("jimp");
@@ -26,7 +26,7 @@ setInterval(() => {
 }, 280000);
 //-----------------------------------------------\\
 
-var prefix = cryptoconfig.prefix;
+var prefix = asreaper.prefix;
 
 const log = message => {
   console.log(`${message}`);
@@ -105,7 +105,7 @@ client.elevation = message => {
   let permlvl = 0;
   if (message.member.hasPermission("BAN_MEMBERS")) permlvl = 2;
   if (message.member.hasPermission("ADMINISTRATOR")) permlvl = 3;
-  if (message.author.id === cryptoconfig.sahip) permlvl = 4;
+  if (message.author.id === asreaper.sahip) permlvl = 4;
   return permlvl;
 };
 

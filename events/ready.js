@@ -1,7 +1,7 @@
 const chalk = require('chalk');
 const moment = require('moment');
 const Discord = require('discord.js');
-const ayarlar = require('../cryptoconfig.json');
+const ayarlar = require('../ayarlar.json');
 var prefix = ayarlar.prefix;
 
 module.exports = client => {
@@ -11,7 +11,7 @@ module.exports = client => {
 "MaximusBoys",
 "Asreaper Önderliğinde",
 "Her Daim!",
-    "Astral CODE"
+    "MaximusBoys"
  ];
 
  setInterval(() => {
