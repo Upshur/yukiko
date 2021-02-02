@@ -2,7 +2,6 @@ const WestraDiscord = require('discord.js');
 const WestraClient = new WestraDiscord.Client();
 const ayarlar = require('../ayarlar.json');
 let prefix = ayarlar.prefix
-let gif = `GİF`
 
 exports.run = (client, message) => {
  const WestraEmbed = new WestraDiscord.MessageEmbed()
@@ -15,7 +14,6 @@ exports.run = (client, message) => {
  **${prefix}grafiti** \n-> Graffiti şeklinde logo yapar.
 `)
  .setTimestamp()
- .setImage(gif)
  message.channel.send(WestraEmbed)
 }
 exports.conf = {

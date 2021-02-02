@@ -2,7 +2,6 @@ const WestraDiscord = require('discord.js');
 const WestraClient = new WestraDiscord.Client();
 const ayarlar = require('../ayarlar.json');
 let prefix = ayarlar.prefix
-let gif = `https://cdn.discordapp.com/attachments/769957882166116353/769974488670011422/standard.gif`
 
 exports.run = (client, message) => {
  const WestraEmbed = new WestraDiscord.MessageEmbed()
@@ -24,7 +23,6 @@ exports.run = (client, message) => {
 **${prefix}kız @kullanıcı isim yaş** \n-> Kızları kayıt etmeye yarar.
 `)
  .setTimestamp()
- .setImage(gif)
  message.channel.send(WestraEmbed)
 }
 exports.conf = {
