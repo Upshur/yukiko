@@ -1,8 +1,8 @@
 const WestraDiscord = require('discord.js');
 const WestraClient = new WestraDiscord.Client();
-const cryptoconfig = require('../cryptoconfig.json');
-let WestraPrefix = cryptoconfig.prefix
-let WestraGif = `https://cdn.discordapp.com/attachments/769957882166116353/769974488670011422/standard.gif`
+const ayarlar = require('../ayarlar.json');
+let prefix = ayarlar.prefix
+let gif = `https://cdn.discordapp.com/attachments/769957882166116353/769974488670011422/standard.gif`
 
 exports.run = (client, message) => {
   if(message.author.id !== "390162986926473216") if(message.author.id !== "488384549479251969") return message.channel.send("Çok yakında...");
@@ -10,16 +10,16 @@ exports.run = (client, message) => {
   .setColor(0x36393F)
  .setAuthor(`${client.user.username} | Nsfw Sistemi Yardım Menüsü`)
  .setDescription(`
-<a:cryptobyzsyhtik:769976055715856384> **${WestraPrefix}anal** -> __Anal Nsfw Atar.__
-<a:cryptobyzsyhtik:769976055715856384> **${WestraPrefix}4k** -> __4K Nsfw Atar.__
-<a:cryptobyzsyhtik:769976055715856384> **${WestraPrefix}ass** -> __Ass Nsfw Atar.__
-<a:cryptobyzsyhtik:769976055715856384> **${WestraPrefix}pgif** -> __Pgif Nsfw Atar.w__
-<a:cryptobyzsyhtik:769976055715856384> **${WestraPrefix}hentai** -> __Hentai Nsfw Atar.__
-<a:cryptobyzsyhtik:769976055715856384> **${WestraPrefix}pussy** -> __Pussy Nsfw Atar.__
-<a:cryptobyzsyhtik:769976055715856384> **${WestraPrefix}thigh** -> __Thigh Nsfw Atar.__`)
- .setFooter(`Crypto`)
+ **${prefix}anal** -> __Anal Nsfw Atar.__
+ **${prefix}4k** -> __4K Nsfw Atar.__
+ **${prefix}ass** -> __Ass Nsfw Atar.__
+ **${prefix}pgif** -> __Pgif Nsfw Atar.w__
+ **${prefix}hentai** -> __Hentai Nsfw Atar.__
+ **${prefix}pussy** -> __Pussy Nsfw Atar.__
+ **${prefix}thigh** -> __Thigh Nsfw Atar.__`)
+ .setFooter(`Asreaper`)
  .setTimestamp()
- .setImage(WestraGif)
+ .setImage(gif)
  message.channel.send(WestraEmbed)
 }
 exports.conf = {

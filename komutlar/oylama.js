@@ -6,13 +6,13 @@ const Discord = require('discord.js');
    if (!question) return message.channel.send(
      new Discord.MessageEmbed()
      .setColor("BLUE")
-     .setDescription(`<a:cryptored:770187639801774080> Yazı yazman gerek.`)).then(m => m.delete(5000));
+     .setDescription(` Yazı yazman gerek.`)).then(m => m.delete(5000));
      message.channel.send(
        new Discord.MessageEmbed()
        .setColor("BLUE")
        .setThumbnail(client.user.displayAvatarURL())
        .setTimestamp()
-       .setFooter('Crypto', client.user.displayAvatarURL())
+       .setFooter('', client.user.displayAvatarURL())
        .addField(`**Oylama:**`, `**${question}**`)).then(function(message) {
          message.react('✅');
          message.react('❌');

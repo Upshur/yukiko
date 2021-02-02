@@ -4,7 +4,7 @@ const WestraClient =
       new WestraDiscord.Client();
 exports.run = (client, message) => {
   if(message.author.id !== "390162986926473216") if(message.author.id !== "488384549479251969") return message.channel.send("hoop bilader sahip komutu bu");
-const WestraEmbed = new WestraDiscord.MessageEmbed().setColor(0x36393F).setFooter(`Crypto`).setTimestamp()
+const WestraEmbed = new WestraDiscord.MessageEmbed().setColor(0x36393F).setFooter(``).setTimestamp()
 .setDescription(`  ping değeri şu an = **${client.ws.ping} ms**`)
 message.channel.send(WestraEmbed)
 };

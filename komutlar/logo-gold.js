@@ -2,7 +2,7 @@ const Discord = require("discord.js")
 const {MessageEmbed} = Discord
 exports.run = async (client,message,args) =>{
   let yazı = args[0]
-  if(!yazı) return message.channel.send("<a:cryptored:770187639801774080> Logo oluşturmak için bir yazı girmelisin.")
+  if(!yazı) return message.channel.send(" Logo oluşturmak için bir yazı girmelisin.")
   let api = `https://habbofont.net/font/palooza/${yazı}.gif`
   const embed = new MessageEmbed()
   .setColor("BLUE")

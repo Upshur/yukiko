@@ -11,6 +11,7 @@ module.exports = client => {
 "MaximusBoys",
 "Asreaper Önderliğinde",
 "Her Daim!",
+    "Astral CODE"
  ];
 
  setInterval(() => {
