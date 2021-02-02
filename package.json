@@ -1,9 +1,9 @@
 {
-  "//1": "Crypto",
-  "//2": "Crypto",
-  "name": "Crypto",
+  "//1": "Asreaper",
+  "//2": "Asreaper",
+  "name": "Asreaper",
   "version": "0.0.1",
-  "description": "Crypto",
+  "description": "Asreaper",
   "main": "shard.js",
   "scripts": {
     "start": "node shard.js"
