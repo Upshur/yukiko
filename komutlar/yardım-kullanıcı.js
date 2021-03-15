@@ -1,10 +1,10 @@
-const WestraDiscord = require('discord.js');
-const WestraClient = new WestraDiscord.Client();
+const asreaperDiscord = require('discord.js');
+const asreaperClient = new asreaperDiscord.Client();
 const ayarlar = require('../ayarlar.json');
 let prefix = ayarlar.prefix
 
 exports.run = (client, message) => {
- const WestraEmbed = new WestraDiscord.MessageEmbed()
+ const asreaperEmbed = new asreaperDiscord.MessageEmbed()
   .setColor(0x36393F)
  .setAuthor(`${client.user.username} | Kullanıcı Yardım Menüsü`)
  .setDescription(`
@@ -17,7 +17,7 @@ exports.run = (client, message) => {
  **sonmesaj** \n-> Yazdığınız son mesajı gösterir.
 `)
  .setTimestamp()
- message.channel.send(WestraEmbed)
+ message.channel.send(asreaperEmbed)
 }
 exports.conf = {
   enabled: true,

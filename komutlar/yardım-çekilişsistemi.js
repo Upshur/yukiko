@@ -1,10 +1,10 @@
-const WestraDiscord = require('discord.js');
-const WestraClient = new WestraDiscord.Client();
+const asreaperDiscord = require('discord.js');
+const asreaperClient = new asreaperDiscord.Client();
 const ayarlar = require('../ayarlar.json');
 let Prefix = ayarlar.prefix
 
 exports.run = (client, message) => {
- const WestraEmbed = new WestraDiscord.MessageEmbed()
+ const asreaperEmbed = new asreaperDiscord.MessageEmbed()
   .setColor(0x36393F)
  .setAuthor(`${client.user.username} | Çekiliş Sistemi Yardım Menüsü`)
  .setDescription(`
@@ -14,7 +14,7 @@ exports.run = (client, message) => {
 `)
  .setFooter(`Asreaper Bot`)
  .setTimestamp()
- message.channel.send(WestraEmbed)
+ message.channel.send(asreaperEmbed)
 }
 exports.conf = {
   enabled: true,

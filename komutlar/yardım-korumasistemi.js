@@ -1,11 +1,11 @@
-const WestraDiscord = require('discord.js');
-const WestraClient = new WestraDiscord.Client();
+const asreaperDiscord = require('discord.js');
+const asreaperClient = new asreaperDiscord.Client();
 const ayarlar = require('../ayarlar.json');
 let prefix = ayarlar.prefix
-let gif = `https://cdn.discordapp.com/attachments/769957882166116353/769974488670011422/standard.gif`
+let gif = ``
 
 exports.run = (client, message) => {
- const WestraEmbed = new WestraDiscord.MessageEmbed()
+ const asreaperEmbed = new asreaperDiscord.MessageEmbed()
   .setColor(0x36393F)
  .setAuthor(`${client.user.username} | Koruma Sistemi Yardım Menüsü`)
  .setDescription(`
@@ -17,10 +17,10 @@ exports.run = (client, message) => {
  **${prefix}rol-koruma-sıfırla** \n-> Rol koruma sistemini sıfırlar.
  **${prefix}spam-koruma** \n-> Spam koruma sistemini açar.
  **${prefix}spam-koruma-kapat** \n-> Spam koruma sistemini kapatır.`)
- .setFooter(`Crypto`)
+ .setFooter(`Asreaper`)
  .setTimestamp()
  .setImage(gif)
- message.channel.send(WestraEmbed)
+ message.channel.send(asreaperEmbed)
 }
 exports.conf = {
   enabled: true,

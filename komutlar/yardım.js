@@ -25,6 +25,6 @@ exports.conf = {
 
 exports.help = {
     name: "yardım",
-    description: "westra",
-    usage: "westra"
+    description: "",
+    usage: ""
 }

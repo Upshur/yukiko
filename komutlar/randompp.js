@@ -4,7 +4,7 @@ exports.run = (client, message) => {
   .setColor("BLUE")
   .setTimestamp()
   .setImage(client.users.cache.random().displayAvatarURL({ display: true, dynamic: true }))
-  message.channel.send(WestraEmbed)
+  message.channel.send(asreaperEmbed)
 }
 exports.conf = {
   enabled: true,

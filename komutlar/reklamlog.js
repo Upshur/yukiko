@@ -32,6 +32,6 @@ exports.conf = {
 
 exports.help = {
   name: 'reklamlog',
-  description: 'WESTRA',
-  usage: 'WESTRA'
+  description: 'asreaper',
+  usage: 'asreaper'
 }
