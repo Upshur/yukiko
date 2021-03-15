@@ -32,6 +32,6 @@ exports.conf = {
 
 exports.help = {
   name: 'küfürlog',
-  description: 'WESTRA',
-  usage: 'WESTRA'
+  description: '',
+  usage: ''
 }

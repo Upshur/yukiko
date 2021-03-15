@@ -10,7 +10,7 @@ const yardım = new Discord.MessageEmbed()
   .addField(" • Kategoriler:", `> • [!kullanıcı](Link): **Kullanıcı yardım menüsünü gösterir.**\n > • [!moderasyon](Link): **Moderasyon yardım menüsünü gösterir.**\n > • [!kayıtsistemi](Link): ** Kayıt sistemi yardım menüsünü gösterir.**\n > • [!korumasistemi](Link): ** Koruma sistemi yardım menüsünü gösterir.**\n > • [!logosistemi](Link): ** Logo sistemi yardım menüsünü gösterir.**\n > • [!çekilişsistemi](Link): ** Çekiliş sistemi yardım menüsünü gösterir.**`)
   .addField(" • Güncelleme Notları:", "**Güncelleme v0.4:** Çekiliş sistemi eklendi!")
 
-  .addField(" • Linkler:", "• [Davet Et](Link) • [Destek Sunucusu](Link) • [Web Site](Link) •")
+  .addField(" • Linkler:", "• [Davet Et](Link) • [Destek Sunucusu](https://discord.gg/mXWkDfZq7v) • [Web Site](Link) •")
   .setImage("")
 .setFooter("Asreaper", message.author.avatarURL())
 .setTimestamp()

@@ -29,6 +29,6 @@ exports.run = (client, message) => {
 
 exports.help = {
   name: 'küfürengel',
-  description: 'WESTRA',
-  usage: 'WESTRA'
+  description: 'asreaper',
+  usage: 'asreaper'
 }

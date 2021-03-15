@@ -25,27 +25,27 @@ module.exports = message => {
     .setColor("0x36393F")
    .setTitle('KOMUTLARI KULLANAMAZSINIZ!')
   .setDescription(`Üzgünüm ancak komutları kullanamazsınız! Kurucularımız tarafından **${karalistesebep}** sebebiyle komutları kullanmanız yasaklandı!.`)
-   .setFooter(`Crypto'dan engellendiniz.`)
+   .setFooter(`Asreaper Tarafından Engellendiniz!`)
    .setImage("https://img.artigercek.com/uploads/1/0/7pOJ1lYcS2P0bKjoHMFpFC4xAT7bD3JnNSmjY4wJ.jpeg")
    .setThumbnail(client.user.avatarURL())
    
-   const westrabencanımbro = new Discord.MessageEmbed()
+   const asreaper = new Discord.MessageEmbed()
    .setColor("BLUE")
    .setTimestamp()
-   .setFooter(`Crypto`)
+   .setFooter(`Asreaper`)
    .setDescription("**"+message.author.tag+"** adlı kullanıcı karalistede olup **"+command+"** adlı komutu: **"+message.guild.name+"** sunucusunda kullanmayı denedi.")
-   client.channels.cache.get("771401212712583188").send(westrabencanımbro)
+   client.channels.cache.get("771401212712583188").send(asreaper)
   return message.channel.send(karaliste)
 
         }
-       const westrabencanımbrosadadsasd = new Discord.MessageEmbed()
+       const asreaper = new Discord.MessageEmbed()
    .setColor("BLUE")
    .setTimestamp()
-   .setFooter(`Crypto`)
+   .setFooter(`Asreaper`)
    .setDescription("**"+message.author.tag+"** adlı kullanıcı **"+command+"** adlı komutu: **"+message.guild.name+"** sunucusunda kullandı.")
        
        
-    //wqerewq
+    //
    if (cmd.conf.enabled === false) {
       if (!ayarlar.sahip.includes(message.author.id) && !ayarlar.sahip.includes(message.author.id)) {
         const embed = new Discord.MessageEmbed()
@@ -96,7 +96,7 @@ module.exports = message => {
 		if (cmd.conf.permLevel === 5) {
 			if (!ayarlar.sahip.includes(message.author.id)) {
 				const embed = new Discord.MessageEmbed()
-					.setDescription(` Bu komutu sadece **sahibim** kullanabilir!`)
+					.setDescription(` Bu komutu sadece **sahip** kullanabilir!`)
 					.setColor("RED")
 				message.channel.send({embed})
 				return

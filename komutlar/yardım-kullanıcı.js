@@ -9,7 +9,7 @@ exports.run = (client, message) => {
  .setAuthor(`${client.user.username} | Kullanıcı Yardım Menüsü`)
  .setDescription(`
  **davet** \n-> Botu davet edersiniz.
- **$shardbilgi** \n-> Botun shard bilgilerini gösterir.
+ **shardbilgi** \n-> Botun shard bilgilerini gösterir.
  **pp** \n-> Etiketlediğiniz kişinin avatarını gösterir.
  **randompp** \n-> Botun ekli olduğu sunuculardaki her hangi birinin avatarını atar.
  **öneri** \n-> Bota öneri belirtirsiniz.

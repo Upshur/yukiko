@@ -27,12 +27,12 @@ exports.run = async (client, message, args) => {
     .setColor("RANDOM")
     .setDescription(` <@${user}> adlı kullanıcı başarıyla **${sebep}** sebebiyle karalisteye alındı!`)
     message.channel.send({embed: embed})
-  const westrabumm = new Discord.MessageEmbed()
+  const asreaper = new Discord.MessageEmbed()
   .setColor("RED")
-  .setFooter("Crypto")
+  .setFooter("Asreaper")
   .setTimestamp()
-  .setDescription(` <@${message.author.id}> adlı yetkilimiz tarafından karalisteye alındın! Artık Crypto'nun komutlarını kullanamazsın. Karalisteye alınma sebebin: **${sebep}**`)
-  if (client.users.cache.get(user).send(westrabumm)){
+  .setDescription(` <@${message.author.id}> adlı yetkilimiz tarafından karalisteye alındın! Artık Asreaperi kullanamazsın. Karalisteye alınma sebebin: **${sebep}**`)
+  if (client.users.cache.get(user).send(asreaper)){
   } else return
   
 };

@@ -148,7 +148,8 @@ const reklam = [
   ".gd",
   ".az",
   ".party",
-".gf"
+".gf",
+".31"
 ];
 client.on("messageUpdate", async (old, nev) => {
 
@@ -651,7 +652,7 @@ client.on("guildMemberAdd", async member => {
   let rol = await db.fetch(`otoRL_${member.guild.id}`);
   let mesaj = db.fetch(`otoRM_${member.guild.id}`);
   if (!rol) return;
-const benwestranasilsinizefenimmmmasdasd = new Discord.MessageEmbed()
+const asreaper = new Discord.MessageEmbed()
 .setColor("BLUE")
 .setTimestamp()
 .setFooter(`Asreaper`)
@@ -663,7 +664,7 @@ const benwestranasilsinizefenimmmmasdasd = new Discord.MessageEmbed()
   if (!mesaj) {
     client.channels.cache
       .get(kanal)
-      .send(benwestranasilsinizefenimmmmasdasd);
+      .send(asreaper);
     return member.roles.add(rol);
   }
 
@@ -706,12 +707,12 @@ db.add(`mesaj.${message.guild.id}.${message.author.id}`, 1)
 if(timeout) {
 const sayı = await db.fetch(`mesaj.${message.guild.id}.${message.author.id}`);
 if(Date.now() < maxTime) {
-  const westraaaaam = new Discord.MessageEmbed()
+  const asreaper = new Discord.MessageEmbed()
   .setColor(0x36393F)
   .setDescription(` <@${message.author.id}> , **Bu sunucuda spam yapmak yasak!**`)
  // .setFooter(`Bu mesaj otomatik olarak silinecektir.`)
  if (message.member.hasPermission("BAN_MEMBERS")) return ;
- message.channel.send(westraaaaam).then(msg => msg.delete({timeout: 1500}));
+ message.channel.send(asreaper).then(msg => msg.delete({timeout: 1500}));
   return message.delete();
   
 }

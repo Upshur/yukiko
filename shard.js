@@ -6,12 +6,12 @@ const westra = new Discord.ShardingManager('./asreaper.js', {
     token: asreaper.token
 });
 
-westra.spawn(); 
+asreaper.spawn(); 
 
-westra.on('launch', shard => {
+asreaper.on('launch', shard => {
   console.log(`**${shard.id}** ID'li shard başlatıldı.`)
 });
 
 setTimeout(() => {
-    westra.broadcastEval("process.exit()");
+    asreaper.broadcastEval("process.exit()");
 }, 21600000);

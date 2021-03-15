@@ -1,5 +1,5 @@
 const request = require('node-superfetch');
-const crypto = require('crypto');
+const asreaper = require('asreaper');
 const { IMGUR_KEY } = process.env;
 const yes = ['evet'];
 const no = ['hayır']
@@ -62,7 +62,7 @@ class Util {
 	}
 
 	static hash(text, algorithm) {
-		return crypto.createHash(algorithm).update(text).digest('hex');
+		return asreaper.createHash(algorithm).update(text).digest('hex');
 	}
 
 	static async randomFromImgurAlbum(album) {

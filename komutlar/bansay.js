@@ -2,11 +2,11 @@ const Discord = require("discord.js");
 
 exports.run = (client, message, args) => {
 
-  let westraA = message.guild;
-  westraA
+  let asreaper = message.guild;
+  asreaper
     .fetchBans()
-    .then(westra =>
-    message.channel.send(` Sunucunuzda ${westra.size} banlanmış üye bulunmaktadır.`)
+    .then(asreaper =>
+    message.channel.send(` Sunucunuzda ${asreaper.size} banlanmış üye bulunmaktadır.`)
   )
     .catch(console.error);
 };
