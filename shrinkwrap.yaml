@@ -1,6 +1,6 @@
 dependencies:
   adapter: 1.0.0-beta.10
-  chalk: 4.1.0
+  chalk: 4.1.2
   common-tags: 1.8.0
   croxy-api: 2.0.6
   croxydb: 0.0.7
@@ -585,7 +585,7 @@ packages:
       node: '>= 0.8'
     resolution:
       integrity: sha512-zauLjrfCG+xvoyaqLoV8bLVXXNGC4JqlxFCutSDWA6fJrTo2ZuvLYTqZ7aHBLZSMOopbzwv8f+wZcVzfVTI2Dg==
-  /chalk/4.1.0:
+  /chalk/4.1.2:
     dependencies:
       ansi-styles: 4.3.0
       supports-color: 7.2.0
@@ -593,7 +593,7 @@ packages:
     engines:
       node: '>=10'
     resolution:
-      integrity: sha512-qwx12AxXe2Q5xQ43Ac//I6v5aXTipYrSESdOgzrN+9XjgEpyjpKuvSGaN4qE93f7TQTlerQQ8S+EQ0EyDoVL1A==
+      integrity: sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==
   /chownr/1.1.4:
     dev: false
     resolution:
@@ -1820,7 +1820,7 @@ shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
   adapter: ^1.0.0-beta.8
-  chalk: ^4.1.0
+  chalk: ^4.1.2
   common-tags: ^1.8.0
   croxy-api: ^2.0.3
   croxydb: ^0.0.7
