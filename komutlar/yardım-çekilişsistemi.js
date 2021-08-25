@@ -12,7 +12,7 @@ exports.run = (client, message) => {
  **${Prefix}reroll** \n-> Çekilişi yeniden çeker.
  **${Prefix}çekilişbitir** \n-> Çekilişi bitirir.
 `)
- .setFooter(`Asreaper Bot`)
+ .setFooter(`YUKİKO Bot`)
  .setTimestamp()
  message.channel.send(asreaperEmbed)
 }
